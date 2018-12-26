@@ -42,6 +42,8 @@ function initSearch() {
             html = data.map(function (post) {
                 return tpl(searchTpl, {
                     title: post.title,
+					//date: new Date(post.date).toLocaleDateString(),
+					//url: (localhost:4000 + '/' + post.path)
                     url: (window.mihoConfig.root + '/' + post.path)
                 });
             }).join('');
