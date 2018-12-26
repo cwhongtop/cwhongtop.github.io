@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="鸿的博客">
   
-  <meta name="description" content="畅通工程续&amp;nbsp;  Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)Total Submission(s): 59078    Accepted Submission(s): 22176  Problem Description 某省自从实行了很多年的畅通工程计划后，终于修建">
+  <meta name="description" content="畅通工程续&amp;nbsp; Problem Description 某省自从实行了很多年的畅通工程计划后，终于修建了很多路。不过路多了也不好，每次要从一个城镇到另一个城镇时，都有许多种道路方案可以选择，而某些方案要比另一些方案行走的距离要短很多。这让行人很困扰。&amp;nbsp;现在，已知起点和终点，请你计算出要从起点到终点，最短需要行走多少距离。&amp;nbsp; Input&amp;nbsp;本题目包含多组数据，请处">
 <meta name="keywords" content="博客,acm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杭电acm1874-畅通工程续">
 <meta property="og:url" content="http://yoursite.com/2018/12/25/程序日记本/杭电acm1874-畅通工程续/index.html">
 <meta property="og:site_name" content="鸿的博客">
-<meta property="og:description" content="畅通工程续&amp;nbsp;  Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)Total Submission(s): 59078    Accepted Submission(s): 22176  Problem Description 某省自从实行了很多年的畅通工程计划后，终于修建">
+<meta property="og:description" content="畅通工程续&amp;nbsp; Problem Description 某省自从实行了很多年的畅通工程计划后，终于修建了很多路。不过路多了也不好，每次要从一个城镇到另一个城镇时，都有许多种道路方案可以选择，而某些方案要比另一些方案行走的距离要短很多。这让行人很困扰。&amp;nbsp;现在，已知起点和终点，请你计算出要从起点到终点，最短需要行走多少距离。&amp;nbsp; Input&amp;nbsp;本题目包含多组数据，请处">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T10:32:18.245Z">
+<meta property="og:updated_time" content="2018-12-26T10:26:52.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杭电acm1874-畅通工程续">
-<meta name="twitter:description" content="畅通工程续&amp;nbsp;  Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)Total Submission(s): 59078    Accepted Submission(s): 22176  Problem Description 某省自从实行了很多年的畅通工程计划后，终于修建">
+<meta name="twitter:description" content="畅通工程续&amp;nbsp; Problem Description 某省自从实行了很多年的畅通工程计划后，终于修建了很多路。不过路多了也不好，每次要从一个城镇到另一个城镇时，都有许多种道路方案可以选择，而某些方案要比另一些方案行走的距离要短很多。这让行人很困扰。&amp;nbsp;现在，已知起点和终点，请你计算出要从起点到终点，最短需要行走多少距离。&amp;nbsp; Input&amp;nbsp;本题目包含多组数据，请处">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -147,9 +147,6 @@
       
             
             <h1 id="畅通工程续"><a href="#畅通工程续" class="headerlink" title="畅通工程续"></a>畅通工程续</h1><p>&nbsp;</p>
-<blockquote>
-<p><strong>Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)<br>Total Submission(s): 59078    Accepted Submission(s): 22176</strong></p>
-</blockquote>
 <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><blockquote>
 <p>某省自从实行了很多年的畅通工程计划后，终于修建了很多路。不过路多了也不好，每次要从一个城镇到另一个城镇时，都有许多种道路方案可以选择，而某些方案要比另一些方案行走的距离要短很多。这让行人很困扰。<br>&nbsp;<br>现在，已知起点和终点，请你计算出要从起点到终点，最短需要行走多少距离。<br>&nbsp;<br> Input<br>&nbsp;<br>本题目包含多组数据，请处理到文件结束。<br>&nbsp;<br>每组数据第一行包含两个正整数N和M(0&lt;N&lt;200,0&lt;M&lt;1000)，分别代表现有城镇的数目和已修建的道路的数目。城镇分别以0～N-1编号。<br>&nbsp;<br>接下来是M行道路信息。每一行有三个整数A,B,X(0&lt;=A,B&lt;N,A!=B,0&lt;X&lt;10000),表示城镇A和城镇B之间有一条长度为X的双向道路。<br>&nbsp;<br>再接下一行有两个整数S,T(0&lt;=S,T&lt;N)，分别代表起点和终点。<br>&nbsp;<br>Output<br>&nbsp;<br>对于每组数据，请在一行里输出最短需要行走的距离。如果不存在从S到T的路线，就输出-1.<br>&nbsp;<br>Sample Input<br>&nbsp;<br>3 3 0 1 1 0 2 3 1 2 1 0 2 3 1 0 1 1 1 2<br>&nbsp;<br>Sample Output<br>&nbsp;<br>2<br>&nbsp;<br>-1</p>
 </blockquote>
@@ -160,7 +157,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月25日 18:32</p>
+        <p>最后更新： 2018年12月26日 18:26</p>
         <p>原始链接： <a class="post-url" href="/2018/12/25/程序日记本/杭电acm1874-畅通工程续/" title="杭电acm1874-畅通工程续">http://yoursite.com/2018/12/25/程序日记本/杭电acm1874-畅通工程续/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -287,19 +284,19 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/杭电acm1548-A-string-lift/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/程序日记本/杭电acm1863-畅通工程/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          杭电acm1548-A-string-lift
+          杭电acm1863-畅通工程
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/程序日记本/杭电acm1863-畅通工程/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">杭电acm1863-畅通工程</span>
+    <a href="/2018/12/25/程序日记本/杭电acm2037-今年暑假不AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm2037-今年暑假不AC</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   

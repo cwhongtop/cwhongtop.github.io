@@ -8,21 +8,21 @@
   
     <meta name="keywords" content="鸿的博客">
   
-  <meta name="description" content="Train Problem I&amp;nbsp;  Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 40640    Accepted Submission(s): 15217  Problem Description As the new te">
+  <meta name="description" content="Train Problem I&amp;nbsp; Problem Description As the new term comes, the Ignatius Train Station is very busy nowadays. A lot of student want to get back to school by train(because the trains in the Ignati">
 <meta name="keywords" content="博客,acm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杭电acm1022-Train-Problem-I">
 <meta property="og:url" content="http://yoursite.com/2018/12/25/程序日记本/杭电acm1022-Train-Problem-I/index.html">
 <meta property="og:site_name" content="鸿的博客">
-<meta property="og:description" content="Train Problem I&amp;nbsp;  Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 40640    Accepted Submission(s): 15217  Problem Description As the new te">
+<meta property="og:description" content="Train Problem I&amp;nbsp; Problem Description As the new term comes, the Ignatius Train Station is very busy nowadays. A lot of student want to get back to school by train(because the trains in the Ignati">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-d17d643a946eb725.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12110500-29de1119f7725bae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-61746da88ad893e4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-12-25T10:33:32.388Z">
+<meta property="og:updated_time" content="2018-12-26T10:25:03.876Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杭电acm1022-Train-Problem-I">
-<meta name="twitter:description" content="Train Problem I&amp;nbsp;  Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 40640    Accepted Submission(s): 15217  Problem Description As the new te">
+<meta name="twitter:description" content="Train Problem I&amp;nbsp; Problem Description As the new term comes, the Ignatius Train Station is very busy nowadays. A lot of student want to get back to school by train(because the trains in the Ignati">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/12110500-d17d643a946eb725.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
   
@@ -151,9 +151,6 @@
       
             
             <h1 id="Train-Problem-I"><a href="#Train-Problem-I" class="headerlink" title="Train Problem I"></a>Train Problem I</h1><p>&nbsp;</p>
-<blockquote>
-<p><strong>Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)<br>Total Submission(s): 40640    Accepted Submission(s): 15217</strong></p>
-</blockquote>
 <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><blockquote>
 <p>As the new term comes, the Ignatius Train Station is very busy nowadays. A lot of student want to get back to school by train(because the trains in the Ignatius Train Station is the fastest all over the world ^v^). But here comes a problem, there is only one railway where all the trains stop. So all the trains come in from one side and get out from the other side. For this problem, if train A gets into the railway first, and then train B gets into the railway before train A leaves, train A can’t leave until train B leaves. The pictures below figure out the problem. Now the problem for you is, there are at most 9 trains in the station, all the trains has an ID(numbered from 1 to n), the trains get into the railway in an order O1, your task is to determine whether the trains can get out in an order O2.<br><img src="http://upload-images.jianshu.io/upload_images/12110500-d17d643a946eb725.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/12110500-29de1119f7725bae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="http://upload-images.jianshu.io/upload_images/12110500-61746da88ad893e4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>&nbsp;<br>Input<br>&nbsp;<br>The input contains several test cases. Each test case consists of an integer, the number of trains, and two strings, the order of the trains come in:O1, and the order of the trains leave:O2. The input is terminated by the end of file. More details in the Sample Input.<br>&nbsp;<br>Output<br>&nbsp;<br>The output contains a string “No.” if you can’t exchange O2 to O1, or you should output a line contains “Yes.”, and then output your way in exchanging the order(you should output “in” for a train getting into the railway, and “out” for a train getting out of the railway). Print a line contains “FINISH” after each test case. More details in the Sample Output.<br>&nbsp;<br>Sample Input<br>&nbsp;<br>3 123 321 3 123 312<br>&nbsp;<br>Sample Output<br>&nbsp;<br>Yes. in in in out out out FINISH No. FINISH<br>&nbsp;<br><em>Hint</em><br>&nbsp;<br>Hint&nbsp;<br>For the first Sample Input, we let train 1 get in, then train 2 and train 3. So now train 3 is at the top of the railway, so train 3 can leave first, then train 2 and train 1. In the second Sample input, we should let train 3 leave first, so we have to let train 1 get in, then train 2 and train 3. Now we can let train 3 leave. But after that we can’t let train 1 leave before train 2, because train 2 is at the top of the railway at the moment.<br>&nbsp;<br>So we output “No.”.</p>
 </blockquote>
@@ -164,7 +161,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月25日 18:33</p>
+        <p>最后更新： 2018年12月26日 18:25</p>
         <p>原始链接： <a class="post-url" href="/2018/12/25/程序日记本/杭电acm1022-Train-Problem-I/" title="杭电acm1022-Train-Problem-I">http://yoursite.com/2018/12/25/程序日记本/杭电acm1022-Train-Problem-I/</a></p>
         <footer>
             <a href="http://yoursite.com">

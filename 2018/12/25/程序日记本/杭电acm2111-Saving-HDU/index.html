@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="鸿的博客">
   
-  <meta name="description" content="Saving HDU&amp;nbsp;  Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)Total Submission(s): 14134    Accepted Submission(s): 6320  Problem Description 话说上回讲到海东集团面临内外交困，公司">
+  <meta name="description" content="Saving HDU&amp;nbsp; Problem Description 话说上回讲到海东集团面临内外交困，公司的元老也只剩下XHD夫妇二人了。显然，作为多年拼搏的商人，XHD不会坐以待毙的。  一天，当他正在苦思冥想解困良策的时候，突然想到了自己的传家宝，那是公司成立的时候，父亲作为贺礼送来的一个锦囊，徐父当时交代，不到万不得已的时候，不要打开它。“现在不正是最需要的时候吗？”，一边想，XHD一">
 <meta name="keywords" content="博客,acm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杭电acm2111-Saving-HDU">
 <meta property="og:url" content="http://yoursite.com/2018/12/25/程序日记本/杭电acm2111-Saving-HDU/index.html">
 <meta property="og:site_name" content="鸿的博客">
-<meta property="og:description" content="Saving HDU&amp;nbsp;  Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)Total Submission(s): 14134    Accepted Submission(s): 6320  Problem Description 话说上回讲到海东集团面临内外交困，公司">
+<meta property="og:description" content="Saving HDU&amp;nbsp; Problem Description 话说上回讲到海东集团面临内外交困，公司的元老也只剩下XHD夫妇二人了。显然，作为多年拼搏的商人，XHD不会坐以待毙的。  一天，当他正在苦思冥想解困良策的时候，突然想到了自己的传家宝，那是公司成立的时候，父亲作为贺礼送来的一个锦囊，徐父当时交代，不到万不得已的时候，不要打开它。“现在不正是最需要的时候吗？”，一边想，XHD一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T10:31:53.078Z">
+<meta property="og:updated_time" content="2018-12-26T10:27:04.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杭电acm2111-Saving-HDU">
-<meta name="twitter:description" content="Saving HDU&amp;nbsp;  Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)Total Submission(s): 14134    Accepted Submission(s): 6320  Problem Description 话说上回讲到海东集团面临内外交困，公司">
+<meta name="twitter:description" content="Saving HDU&amp;nbsp; Problem Description 话说上回讲到海东集团面临内外交困，公司的元老也只剩下XHD夫妇二人了。显然，作为多年拼搏的商人，XHD不会坐以待毙的。  一天，当他正在苦思冥想解困良策的时候，突然想到了自己的传家宝，那是公司成立的时候，父亲作为贺礼送来的一个锦囊，徐父当时交代，不到万不得已的时候，不要打开它。“现在不正是最需要的时候吗？”，一边想，XHD一">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -147,9 +147,6 @@
       
             
             <h1 id="Saving-HDU"><a href="#Saving-HDU" class="headerlink" title="Saving HDU"></a>Saving HDU</h1><p>&nbsp;</p>
-<blockquote>
-<p><strong>Time Limit: 3000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)<br>Total Submission(s): 14134    Accepted Submission(s): 6320</strong></p>
-</blockquote>
 <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><blockquote>
 <p>话说上回讲到海东集团面临内外交困，公司的元老也只剩下XHD夫妇二人了。显然，作为多年拼搏的商人，XHD不会坐以待毙的。<br>  一天，当他正在苦思冥想解困良策的时候，突然想到了自己的传家宝，那是公司成立的时候，父亲作为贺礼送来的一个锦囊，徐父当时交代，不到万不得已的时候，不要打开它。“现在不正是最需要的时候吗？”，一边想，XHD一边找到了这个精心保管的锦囊，打开一看，里面只有一句话“杭城北麓千人洞有宝”。<br>  二话不说，XHD拿起一个大口袋就出发了，这个千人洞他是知道的，小的时候，爸爸曾经带他来过这个隐蔽的路口，并告诉他，这是千人洞。他现在才明白爸爸当初这句话的含义。<br>  尽管有点印象，XHD还是花了很大的精力才找到这个异常隐蔽的洞口，走进一看，几乎惊呆了，真的是眼花缭乱！不过尽管宝贝的种类不少，但是每种宝贝的量并不多，当然，每种宝贝单位体积的价格也不一样，为了挽救HDU，现在请你帮忙尽快计算出来XHD最多能带回多少价值的宝贝？（假设宝贝可以分割，分割后的价值和对应的体积成正比）<br>&nbsp;<br>Input<br>输入包含多个测试实例，每个实例的第一行是两个整数v和n(v,n&lt;100)，分别表示口袋的容量和宝贝的种类，接着的n行每行包含2个整数pi和mi(0&lt;pi,mi&lt;10)，分别表示某种宝贝的单价和对应的体积，v为0的时候结束输入。<br>&nbsp;<br>Output<br>对于每个测试实例，请输出XHD最多能取回多少价值的宝贝，每个实例的输出占一行。<br> &nbsp;<br>Sample Input<br>2 2 3 1 2 3 0<br>&nbsp;<br>Sample Output<br>5 经过锦囊相助，HDU会脱离危机吗？ 欲知后事如何，且听下回分解——</p>
 </blockquote>
@@ -160,7 +157,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月25日 18:31</p>
+        <p>最后更新： 2018年12月26日 18:27</p>
         <p>原始链接： <a class="post-url" href="/2018/12/25/程序日记本/杭电acm2111-Saving-HDU/" title="杭电acm2111-Saving-HDU">http://yoursite.com/2018/12/25/程序日记本/杭电acm2111-Saving-HDU/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -298,8 +295,8 @@
     </a>
   
   
-    <a href="/2018/12/25/程序日记本/杭电acm2544-最短路/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">杭电acm2544-最短路</span>
+    <a href="/2018/12/25/程序日记本/杭电acm2124-Repair-the-Wall/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm2124-Repair-the-Wall</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   

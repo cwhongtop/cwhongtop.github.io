@@ -8,19 +8,19 @@
   
     <meta name="keywords" content="鸿的博客">
   
-  <meta name="description" content="Tian Ji – The Horse Racing&amp;nbsp;  Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 32825    Accepted Submission(s): 9972  Problem Description Her">
+  <meta name="description" content="Tian Ji – The Horse Racing&amp;nbsp; Problem Description Here is a famous story in Chinese history.&amp;nbsp;“That was about 2300 years ago. General Tian Ji was a high official in the country Qi. He likes to">
 <meta name="keywords" content="博客,acm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杭电acm1052-田忌赛马">
 <meta property="og:url" content="http://yoursite.com/2018/12/25/程序日记本/杭电acm1052-田忌赛马/index.html">
 <meta property="og:site_name" content="鸿的博客">
-<meta property="og:description" content="Tian Ji – The Horse Racing&amp;nbsp;  Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 32825    Accepted Submission(s): 9972  Problem Description Her">
+<meta property="og:description" content="Tian Ji – The Horse Racing&amp;nbsp; Problem Description Here is a famous story in Chinese history.&amp;nbsp;“That was about 2300 years ago. General Tian Ji was a high official in the country Qi. He likes to">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-1f5128115058db62.gif?imageMogr2/auto-orient/strip">
-<meta property="og:updated_time" content="2018-12-25T10:33:15.671Z">
+<meta property="og:updated_time" content="2018-12-26T10:25:22.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杭电acm1052-田忌赛马">
-<meta name="twitter:description" content="Tian Ji – The Horse Racing&amp;nbsp;  Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 32825    Accepted Submission(s): 9972  Problem Description Her">
+<meta name="twitter:description" content="Tian Ji – The Horse Racing&amp;nbsp; Problem Description Here is a famous story in Chinese history.&amp;nbsp;“That was about 2300 years ago. General Tian Ji was a high official in the country Qi. He likes to">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/12110500-1f5128115058db62.gif?imageMogr2/auto-orient/strip">
   
   
@@ -149,9 +149,6 @@
       
             
             <h1 id="Tian-Ji-–-The-Horse-Racing"><a href="#Tian-Ji-–-The-Horse-Racing" class="headerlink" title="Tian Ji – The Horse Racing"></a>Tian Ji – The Horse Racing</h1><p>&nbsp;</p>
-<blockquote>
-<p><strong>Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)<br>Total Submission(s): 32825    Accepted Submission(s): 9972</strong></p>
-</blockquote>
 <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><blockquote>
 <p>Here is a famous story in Chinese history.<br>&nbsp;<br>“That was about 2300 years ago. General Tian Ji was a high official in the country Qi. He likes to play horse racing with the king and others.”<br>&nbsp;<br>“Both of Tian and the king have three horses in different classes, namely, regular, plus, and super. The rule is to have three rounds in a match; each of the horses must be used in one round. The winner of a single round takes two hundred silver dollars from the loser.”<br>&nbsp;<br>“Being the most powerful man in the country, the king has so nice horses that in each class his horse is better than Tian’s. As a result, each time the king takes six hundred silver dollars from Tian.”<br>&nbsp;<br>“Tian Ji was not happy about that, until he met Sun Bin, one of the most famous generals in Chinese history. Using a little trick due to Sun, Tian Ji brought home two hundred silver dollars and such a grace in the next match.”<br>&nbsp;<br>“It was a rather simple trick. Using his regular class horse race against the super class from the king, they will certainly lose that round. But then his plus beat the king’s regular, and his super beat the king’s plus. What a simple trick. And how do you think of Tian Ji, the high ranked official in China?”<br>&nbsp;<br><img src="http://upload-images.jianshu.io/upload_images/12110500-1f5128115058db62.gif?imageMogr2/auto-orient/strip" alt="image"><br>&nbsp;<br>Were Tian Ji lives in nowadays, he will certainly laugh at himself. Even more, were he sitting in the ACM contest right now, he may discover that the horse racing problem can be simply viewed as finding the maximum matching in a bipartite graph. Draw Tian’s horses on one side, and the king’s horses on the other. Whenever one of Tian’s horses can beat one from the king, we draw an edge between them, meaning we wish to establish this pair. Then, the problem of winning as many rounds as possible is just to find the maximum matching in this graph. If there are ties, the problem becomes more complicated, he needs to assign weights 0, 1, or -1 to all the possible edges, and find a maximum weighted perfect matching…<br>&nbsp;<br>However, the horse racing problem is a very special case of bipartite matching. The graph is decided by the speed of the horses — a vertex of higher speed always beat a vertex of lower speed. In this case, the weighted bipartite matching algorithm is a too advanced tool to deal with the problem.<br>&nbsp;<br>In this problem, you are asked to write a program to solve this special case of matching problem.<br>&nbsp;<br>Input<br>&nbsp;<br>The input consists of up to 50 test cases. Each case starts with a positive integer n (n &lt;= 1000) on the first line, which is the number of horses on each side. The next n integers on the second line are the speeds of Tian’s horses. Then the next n integers on the third line are the speeds of the king’s horses. The input ends with a line that has a single 0 after the last test case.<br>&nbsp;<br>Output<br>&nbsp;<br>For each input case, output a line containing a single number, which is the maximum money Tian Ji will get, in silver dollars.<br>&nbsp;<br>Sample Input<br>&nbsp;<br>3 92 83 71 95 87 74 2 20 20 20 20 2 20 19 22 18 0<br>&nbsp;<br>Sample Output<br>&nbsp;<br>200 0 0</p>
 </blockquote>
@@ -162,7 +159,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月25日 18:33</p>
+        <p>最后更新： 2018年12月26日 18:25</p>
         <p>原始链接： <a class="post-url" href="/2018/12/25/程序日记本/杭电acm1052-田忌赛马/" title="杭电acm1052-田忌赛马">http://yoursite.com/2018/12/25/程序日记本/杭电acm1052-田忌赛马/</a></p>
         <footer>
             <a href="http://yoursite.com">
