@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="鸿的博客">
   
-  <meta name="description" content="fedora删除多余不用的内核&amp;nbsp;原创 2012年07月06日 15:57:18  6523   （1）查询安装的所有内核  12345678910111213[root@localhost ~]# rpm -qa | grep kernelkernel-PAE-3.4.2-1.fc16.i686kernel-PAE-devel-3.4.2-1.fc16.i686kernel-PAE-de">
+  <meta name="description" content="&amp;nbsp;原创 2012年07月06日 15:57:18  6523  1.查询安装的所有内核12345678910111213[root@localhost ~]# rpm -qa | grep kernelkernel-PAE-3.4.2-1.fc16.i686kernel-PAE-devel-3.4.2-1.fc16.i686kernel-PAE-devel-3.1.0-7.fc16.i6">
 <meta name="keywords" content="博客,问题解决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fedora删除多余不用的内核">
 <meta property="og:url" content="https://cwhong.top/2018/12/25/问题随笔/fedora删除多余不用的内核/index.html">
 <meta property="og:site_name" content="鸿的博客">
-<meta property="og:description" content="fedora删除多余不用的内核&amp;nbsp;原创 2012年07月06日 15:57:18  6523   （1）查询安装的所有内核  12345678910111213[root@localhost ~]# rpm -qa | grep kernelkernel-PAE-3.4.2-1.fc16.i686kernel-PAE-devel-3.4.2-1.fc16.i686kernel-PAE-de">
+<meta property="og:description" content="&amp;nbsp;原创 2012年07月06日 15:57:18  6523  1.查询安装的所有内核12345678910111213[root@localhost ~]# rpm -qa | grep kernelkernel-PAE-3.4.2-1.fc16.i686kernel-PAE-devel-3.4.2-1.fc16.i686kernel-PAE-devel-3.1.0-7.fc16.i6">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T08:09:47.257Z">
+<meta property="og:updated_time" content="2018-12-27T10:42:33.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fedora删除多余不用的内核">
-<meta name="twitter:description" content="fedora删除多余不用的内核&amp;nbsp;原创 2012年07月06日 15:57:18  6523   （1）查询安装的所有内核  12345678910111213[root@localhost ~]# rpm -qa | grep kernelkernel-PAE-3.4.2-1.fc16.i686kernel-PAE-devel-3.4.2-1.fc16.i686kernel-PAE-de">
+<meta name="twitter:description" content="&amp;nbsp;原创 2012年07月06日 15:57:18  6523  1.查询安装的所有内核12345678910111213[root@localhost ~]# rpm -qa | grep kernelkernel-PAE-3.4.2-1.fc16.i686kernel-PAE-devel-3.4.2-1.fc16.i686kernel-PAE-devel-3.1.0-7.fc16.i6">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -146,33 +146,24 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="fedora删除多余不用的内核"><a href="#fedora删除多余不用的内核" class="headerlink" title="fedora删除多余不用的内核"></a>fedora删除多余不用的内核</h1><p>&nbsp;<br><strong>原创 2012年07月06日 15:57:18</strong></p>
+            <p>&nbsp;<br><strong>原创 2012年07月06日 15:57:18</strong></p>
 <ul>
 <li>6523</li>
 </ul>
-<blockquote>
-<p>（1）查询安装的所有内核</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# rpm -qa | grep kernel</span><br><span class="line">kernel-PAE-3.4.2-1.fc16.i686</span><br><span class="line">kernel-PAE-devel-3.4.2-1.fc16.i686</span><br><span class="line">kernel-PAE-devel-3.1.0-7.fc16.i686</span><br><span class="line">kernel-headers-3.4.2-1.fc16.i686</span><br><span class="line">abrt-addon-kerneloops-2.0.7-2.fc16.i686</span><br><span class="line">kernel-devel-3.3.2-6.fc16.i686</span><br><span class="line">kernel-PAE-3.3.5-2.fc16.i686</span><br><span class="line">kernel-PAE-devel-3.3.5-2.fc16.i686</span><br><span class="line">kernel-devel-3.4.2-1.fc16.i686</span><br><span class="line">kernel-devel-3.3.5-2.fc16.i686</span><br><span class="line">kernel-PAE-3.1.0-7.fc16.i686</span><br><span class="line">libreport-plugin-kerneloops-2.0.8-4.fc16.i686</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>我这里查出了很多个啊，看来fedora偷偷做了更新。<br>&nbsp;<br>（2）查询当前正在使用的内核</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# uname -r</span><br><span class="line">3.1.0-7.fc16.i686.PAE</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>我的是3.1.0的，因为在做开发，不想频繁更新内核，故把要把其它多余的都给干掉。<br>&nbsp;<br>（3）删除多余的内核</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum remove kernel-PAE-3.4.2*</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# yum remove kernel-PAE-devel-3.4.2*</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# yum remove kernel-devel-3.4.2*</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# yum remove kernel-devel-3.3.2*</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>删除即可。<br>&nbsp;<br>（4）重启计算机</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# reboot</span><br></pre></td></tr></table></figure>
+<h3 id="1-查询安装的所有内核"><a href="#1-查询安装的所有内核" class="headerlink" title="1.查询安装的所有内核"></a>1.查询安装的所有内核</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# rpm -qa | grep kernel</span><br><span class="line">kernel-PAE-3.4.2-1.fc16.i686</span><br><span class="line">kernel-PAE-devel-3.4.2-1.fc16.i686</span><br><span class="line">kernel-PAE-devel-3.1.0-7.fc16.i686</span><br><span class="line">kernel-headers-3.4.2-1.fc16.i686</span><br><span class="line">abrt-addon-kerneloops-2.0.7-2.fc16.i686</span><br><span class="line">kernel-devel-3.3.2-6.fc16.i686</span><br><span class="line">kernel-PAE-3.3.5-2.fc16.i686</span><br><span class="line">kernel-PAE-devel-3.3.5-2.fc16.i686</span><br><span class="line">kernel-devel-3.4.2-1.fc16.i686</span><br><span class="line">kernel-devel-3.3.5-2.fc16.i686</span><br><span class="line">kernel-PAE-3.1.0-7.fc16.i686</span><br><span class="line">libreport-plugin-kerneloops-2.0.8-4.fc16.i686</span><br></pre></td></tr></table></figure>
+<p>我这里查出了很多个啊，看来fedora偷偷做了更新。</p>
+<h3 id="2-查询当前正在使用的内核"><a href="#2-查询当前正在使用的内核" class="headerlink" title="2.查询当前正在使用的内核"></a>2.查询当前正在使用的内核</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# uname -r</span><br><span class="line">3.1.0-7.fc16.i686.PAE</span><br></pre></td></tr></table></figure>
+<p>我的是3.1.0的，因为在做开发，不想频繁更新内核，故把要把其它多余的都给干掉。</p>
+<h3 id="3-删除多余的内核"><a href="#3-删除多余的内核" class="headerlink" title="3.删除多余的内核"></a>3.删除多余的内核</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum remove kernel-PAE-3.4.2*</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# yum remove kernel-PAE-devel-3.4.2*</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# yum remove kernel-devel-3.4.2*</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# yum remove kernel-devel-3.3.2*</span><br></pre></td></tr></table></figure>
+<p>删除即可。</p>
+<h3 id="4-重启计算机"><a href="#4-重启计算机" class="headerlink" title="4.重启计算机"></a>4.重启计算机</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# reboot</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>转载自：<a href="http://blog.csdn.net/charlsecharlse/article/details/7722478" target="_blank" rel="noopener">http://blog.csdn.net/charlsecharlse/article/details/7722478</a></p>
 </blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月25日 16:09</p>
+        <p>最后更新： 2018年12月27日 18:42</p>
         <p>原始链接： <a class="post-url" href="/2018/12/25/问题随笔/fedora删除多余不用的内核/" title="fedora删除多余不用的内核">https://cwhong.top/2018/12/25/问题随笔/fedora删除多余不用的内核/</a></p>
         <footer>
             <a href="https://cwhong.top">
@@ -292,7 +283,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#fedora删除多余不用的内核"><span class="post-toc-text">fedora删除多余不用的内核</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-查询安装的所有内核"><span class="post-toc-text">1.查询安装的所有内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-查询当前正在使用的内核"><span class="post-toc-text">2.查询当前正在使用的内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-删除多余的内核"><span class="post-toc-text">3.删除多余的内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-重启计算机"><span class="post-toc-text">4.重启计算机</span></a></li></ol>
         </nav>
     </aside>
     

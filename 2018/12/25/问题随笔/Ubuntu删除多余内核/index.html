@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="鸿的博客">
   
-  <meta name="description" content="Ubuntu删除多余内核&amp;nbsp;  第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a   第二：查询系统中装了多少内核1dpkg --get-selections|grep linux   第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）">
+  <meta name="description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
 <meta name="keywords" content="博客,问题解决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu删除多余内核">
 <meta property="og:url" content="https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/index.html">
 <meta property="og:site_name" content="鸿的博客">
-<meta property="og:description" content="Ubuntu删除多余内核&amp;nbsp;  第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a   第二：查询系统中装了多少内核1dpkg --get-selections|grep linux   第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）">
+<meta property="og:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T08:08:49.406Z">
+<meta property="og:updated_time" content="2018-12-27T10:28:24.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu删除多余内核">
-<meta name="twitter:description" content="Ubuntu删除多余内核&amp;nbsp;  第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a   第二：查询系统中装了多少内核1dpkg --get-selections|grep linux   第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）">
+<meta name="twitter:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -146,29 +146,17 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="Ubuntu删除多余内核"><a href="#Ubuntu删除多余内核" class="headerlink" title="Ubuntu删除多余内核"></a>Ubuntu删除多余内核</h1><p>&nbsp;</p>
-<blockquote>
-<p>第一：<br>首先查询当前我们使用的是内核是那个版本别删错了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>第二：<br>查询系统中装了多少内核<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>第三：<br>多余的内核可以通过命令删除 需要删除header和image<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）</span><br><span class="line">sudo apt-get remove linux-headers-*.*.*-**（*号用你想删除的实际情况改写）</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>第四：<br>执行完上面命令后再次执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
+            <p>&nbsp;</p>
+<h3 id="第一：首先查询当前我们使用的是内核是那个版本别删错了。"><a href="#第一：首先查询当前我们使用的是内核是那个版本别删错了。" class="headerlink" title="第一：首先查询当前我们使用的是内核是那个版本别删错了。"></a>第一：首先查询当前我们使用的是内核是那个版本别删错了。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure>
+<h3 id="第二：查询系统中装了多少内核"><a href="#第二：查询系统中装了多少内核" class="headerlink" title="第二：查询系统中装了多少内核"></a>第二：查询系统中装了多少内核</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure>
+<h3 id="第三：多余的内核可以通过命令删除-需要删除header和image"><a href="#第三：多余的内核可以通过命令删除-需要删除header和image" class="headerlink" title="第三：多余的内核可以通过命令删除 需要删除header和image"></a>第三：多余的内核可以通过命令删除 需要删除header和image</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）</span><br><span class="line">sudo apt-get remove linux-headers-*.*.*-**（*号用你想删除的实际情况改写）</span><br></pre></td></tr></table></figure>
+<h3 id="第四：执行完上面命令后再次执行"><a href="#第四：执行完上面命令后再次执行" class="headerlink" title="第四：执行完上面命令后再次执行"></a>第四：执行完上面命令后再次执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure>
 <p>查看内核是否都删除干净了。没干净继续删除。有的内核后面会显示是deinstall 那需要通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections | grep deinstall | sed &apos;s/deinstall/\lpurge/&apos; | sudo dpkg --set-selections; sudo dpkg -Pa</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
 <p>通过上面方法就可以。<br>还有一种通过正则表达式匹配内核然后除最新的统统统统删除的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l &apos;linux-*&apos; | sed &apos;/^ii/!d;/&apos;&quot;$(uname -r | sed &quot;s/-/\1/&quot;)&quot;&apos;/d;s/^[^ ]* [^ ]* .*/\1/;/[0-9]/!d&apos; | xargs sudo apt-get -y purge</span><br></pre></td></tr></table></figure></p>
-</blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月25日 16:08</p>
+        <p>最后更新： 2018年12月27日 18:28</p>
         <p>原始链接： <a class="post-url" href="/2018/12/25/问题随笔/Ubuntu删除多余内核/" title="Ubuntu删除多余内核">https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/</a></p>
         <footer>
             <a href="https://cwhong.top">
@@ -288,26 +276,26 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Ubuntu删除多余内核"><span class="post-toc-text">Ubuntu删除多余内核</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一：首先查询当前我们使用的是内核是那个版本别删错了。"><span class="post-toc-text">第一：首先查询当前我们使用的是内核是那个版本别删错了。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二：查询系统中装了多少内核"><span class="post-toc-text">第二：查询系统中装了多少内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三：多余的内核可以通过命令删除-需要删除header和image"><span class="post-toc-text">第三：多余的内核可以通过命令删除 需要删除header和image</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第四：执行完上面命令后再次执行"><span class="post-toc-text">第四：执行完上面命令后再次执行</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          Ubuntu16.04安装QQ（for linux）
+          Ubuntu-有什么奇技淫巧
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/问题随笔/fedora-安装lantern/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">fedora-安装lantern</span>
+    <a href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Ubuntu16.04安装QQ（for linux）</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
