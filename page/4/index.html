@@ -93,14 +93,17 @@
                         <a title="cwhong" target="_blank" href="//cwhongtop.github.io">
                             <i class="fa fa-home fa-2x"></i></a>
                     
-                        <a title="Github" target="_blank" href="//github.com/cwhongtop">
+                        <a title="Cwhongtop" target="_blank" href="//github.com/cwhongtop">
                             <i class="fa fa-github fa-2x"></i></a>
                     
                         <a title="Jianshu" target="_blank" href="//jianshu.com/u/f0bd3ce40eea">
-                            <i class="fa fa-weibo fa-2x"></i></a>
+                            <i class="fa fa-joomla fa-2x"></i></a>
                     
                         <a title="Twitter" target="_blank" href="//twitter.com/cwhongtop">
                             <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                        <a title="Cwhong723" target="_blank" href="//github.com/cwhong723">
+                            <i class="fa fa-github-square fa-2x"></i></a>
                     
                 </div>
             </nav>
@@ -110,14 +113,14 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
-    <article id="post-问题随笔/Ubuntu16-04安装QQ（for-linux）" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-问题随笔/Ubuntu删除多余内核" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/">Ubuntu16.04安装QQ（for linux）</a>
+      <a class="article-title" href="/2018/12/25/问题随笔/Ubuntu删除多余内核/">Ubuntu删除多余内核</a>
     </h1>
   
 
@@ -134,19 +137,18 @@
     <div class="article-entry " itemprop="articleBody">
       
         <!--<div class="article-img">
-            <a href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/" >
+            <a href="/2018/12/25/问题随笔/Ubuntu删除多余内核/" >
                 
-                <img src="https://cwhong.top/images/banner.jpg" alt="Ubuntu16.04安装QQ（for linux）" title="Ubuntu16.04安装QQ（for linux）">
+                <img src="https://cwhong.top/images/banner.jpg" alt="Ubuntu删除多余内核" title="Ubuntu删除多余内核">
                 
             </a>
         </div>-->
         <div class="article-feed">
             <p>
                 &nbsp;
-一、安装1.安装wine1.1添加PPA1sudo add-apt-repository ppa:ubuntu-wine/ppa
-1.2更新列表1sudo apt-get update
-1.3安装Wine12sudo apt-get install wine1.8 winetricks (note :wine may need updata)
-为了避免错误大...
+第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a
+第二：查询系统中装了多少内核1dpkg --get-selections|grep linux
+第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo...
             </p>
         </div>
       
@@ -170,7 +172,7 @@
 
         </ul>
         
-            <a href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2018/12/25/问题随笔/Ubuntu删除多余内核/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
