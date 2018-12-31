@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Ubuntu删除多余内核 | cwhong&#39;s blog</title>
+  <title>科学上网 | cwhong&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="cwhong's blog">
   
-  <meta name="description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
+  <meta name="description" content="http://srookie.cn/vps-ss.html原本文章写的是SSR教程，但因为SSR项目因为某些原因已经关闭，考虑到大部分用户的需求SS完全能够满足便将本教程修改为了SS，即Shadowsocks。 首先要购买国外主机，我个人推荐使用vlutr，价格和速度都比较理想，最近 vultr 2.5刀/月的vps部分地区缺货，其他的主机厂商大家也可以尝试，如搬瓦工(年付比较划算) 如果选择了v">
 <meta name="keywords" content="博客,问题解决">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu删除多余内核">
-<meta property="og:url" content="https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/index.html">
+<meta property="og:title" content="科学上网">
+<meta property="og:url" content="https://cwhong.top/2018/12/31/问题随笔/科学上网/index.html">
 <meta property="og:site_name" content="cwhong&#39;s blog">
-<meta property="og:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
+<meta property="og:description" content="http://srookie.cn/vps-ss.html原本文章写的是SSR教程，但因为SSR项目因为某些原因已经关闭，考虑到大部分用户的需求SS完全能够满足便将本教程修改为了SS，即Shadowsocks。 首先要购买国外主机，我个人推荐使用vlutr，价格和速度都比较理想，最近 vultr 2.5刀/月的vps部分地区缺货，其他的主机厂商大家也可以尝试，如搬瓦工(年付比较划算) 如果选择了v">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-27T10:28:24.153Z">
+<meta property="og:updated_time" content="2018-12-31T08:20:47.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu删除多余内核">
-<meta name="twitter:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
+<meta name="twitter:title" content="科学上网">
+<meta name="twitter:description" content="http://srookie.cn/vps-ss.html原本文章写的是SSR教程，但因为SSR项目因为某些原因已经关闭，考虑到大部分用户的需求SS完全能够满足便将本教程修改为了SS，即Shadowsocks。 首先要购买国外主机，我个人推荐使用vlutr，价格和速度都比较理想，最近 vultr 2.5刀/月的vps部分地区缺货，其他的主机厂商大家也可以尝试，如搬瓦工(年付比较划算) 如果选择了v">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -113,14 +113,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-问题随笔/Ubuntu删除多余内核" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-问题随笔/科学上网" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      Ubuntu删除多余内核
+      科学上网
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -133,7 +133,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-12-25
+          <i class="fa fa-calendar"></i>  2018-12-31
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -149,18 +149,54 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>&nbsp;</p>
-<h3 id="第一：首先查询当前我们使用的是内核是那个版本别删错了。"><a href="#第一：首先查询当前我们使用的是内核是那个版本别删错了。" class="headerlink" title="第一：首先查询当前我们使用的是内核是那个版本别删错了。"></a>第一：首先查询当前我们使用的是内核是那个版本别删错了。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure>
-<h3 id="第二：查询系统中装了多少内核"><a href="#第二：查询系统中装了多少内核" class="headerlink" title="第二：查询系统中装了多少内核"></a>第二：查询系统中装了多少内核</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure>
-<h3 id="第三：多余的内核可以通过命令删除-需要删除header和image"><a href="#第三：多余的内核可以通过命令删除-需要删除header和image" class="headerlink" title="第三：多余的内核可以通过命令删除 需要删除header和image"></a>第三：多余的内核可以通过命令删除 需要删除header和image</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）</span><br><span class="line">sudo apt-get remove linux-headers-*.*.*-**（*号用你想删除的实际情况改写）</span><br></pre></td></tr></table></figure>
-<h3 id="第四：执行完上面命令后再次执行"><a href="#第四：执行完上面命令后再次执行" class="headerlink" title="第四：执行完上面命令后再次执行"></a>第四：执行完上面命令后再次执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure>
-<p>查看内核是否都删除干净了。没干净继续删除。有的内核后面会显示是deinstall 那需要通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections | grep deinstall | sed &apos;s/deinstall/\lpurge/&apos; | sudo dpkg --set-selections; sudo dpkg -Pa</span><br></pre></td></tr></table></figure></p>
-<p>通过上面方法就可以。<br>还有一种通过正则表达式匹配内核然后除最新的统统统统删除的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l &apos;linux-*&apos; | sed &apos;/^ii/!d;/&apos;&quot;$(uname -r | sed &quot;s/-/\1/&quot;)&quot;&apos;/d;s/^[^ ]* [^ ]* .*/\1/;/[0-9]/!d&apos; | xargs sudo apt-get -y purge</span><br></pre></td></tr></table></figure></p>
+            <p><a href="http://srookie.cn/vps-ss.html" target="_blank" rel="noopener">http://srookie.cn/vps-ss.html</a><br>原本文章写的是SSR教程，但因为SSR项目因为某些原因已经关闭，考虑到大部分用户的需求SS完全能够满足便将本教程修改为了SS，即Shadowsocks。</p>
+<p>首先要购买国外主机，我个人推荐使用vlutr，价格和速度都比较理想，最近 vultr 2.5刀/月的vps部分地区缺货，其他的主机厂商大家也可以尝试，如搬瓦工(年付比较划算)</p>
+<p>如果选择了vultr的话，请点击以下图片去注册(其实是我的推广链接(●’◡’●))</p>
+<p>下面以vultr为例讲解整个流程：</p>
+<p>一、购买主机<br>首先注册</p>
+<p>vultr_ssr_01</p>
+<p>然后充值，vultr从去年起支持支付宝支付，支付金额的话随意选，也可以自定义金额，最近好像有优惠：新用户不定时有优惠，以前新用户关注vultr推特是有三美元奖励的，这些大家可以自行了解。</p>
+<p>vultr_ssr_02</p>
+<p> 充值完毕后我们点击右上角的那个加号来购买我们的VPS，</p>
+<p>vultr_ssr_03</p>
+<p>然后选择服务器位置、系统及配置</p>
+<p>vultr_ssr_04</p>
+<p>选64位的Debian8，</p>
+<p>vultr_ssr_05</p>
+<p>然后选择服务器配置，选最便宜的2.5美元/月，售罄的话就没办法了，换个位置，改买5刀/月的或者换别的商家吧，注意不要选择仅能使用ipv6的服务器，点击deploy now完成购买，</p>
+<p>vultr_ssr_06</p>
+<p>进入控制台就能看到我们刚买的服务器了，等几分钟后系统装完我们就点击进入详情页面查看，</p>
+<p>vultr_ssr_07</p>
+<p>记住ip地址、把密码复制下来</p>
+<p>vultr_ssr_08</p>
+<p>现在我们要做的就是连接到我们的服务器，现在我们需要一个ssh客户端，xshell，putty都是可以的，软件请自行通过网络下载，这里提供两篇教程以供参考：putty教程  xshell教程</p>
+<p>请以root用户登录到服务器，我这里使用的是Ubuntu自带的ssh客户端</p>
+<p>接下来就跟着下面的步骤安装SS</p>
+<p>二、SS一键安装<br>wget –no-check-certificate -O shadowsocks-go.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh</a><br>chmod +x shadowsocks-go.sh<br>./shadowsocks-go.sh 2&gt;&amp;1 | tee shadowsocks-go.log<br>把上面的三行代码依次复制进终端然后回车，接着按照提示进行操作，可根据个人喜好设置密码和端口以及加密方式等等，也可以直接回车使用默认设置（这里使用的是秋水逸冰大佬的脚本）</p>
+<p>设置密码。。。</p>
+<p>设置端口</p>
+<p>加密方式选默认直接回车</p>
+<p>然后等待安装完成</p>
+<p>安装完后会显示SSR的配置信息，一定要记下来哦</p>
+<p>三、锐速优化<br>锐速用于给服务器加速，可以跳过，试用之后感觉速度太慢再安装</p>
+<p>锐速破解版安装，来自91云</p>
+<p>PS：锐速不支持openvz的服务器，如果你购买的是搬瓦工，一定要注意选择kvm而不是openvz</p>
+<p>脚本一：</p>
+<p>wget -N –no-check-certificate <a href="https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh" target="_blank" rel="noopener">https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh</a> &amp;&amp; bash serverspeeder.sh<br>备用脚本：</p>
+<p>wget -N –no-check-certificate <a href="https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh</a> &amp;&amp; bash serverspeeder-all.sh<br>这里跟SS相同，只要把复制代码运行即可，</p>
+<p>中间可能会让你选择内核版本及锐速版本根据提示选择即可</p>
+<p>这样就算安装完了vultr_ssr_17</p>
+<p>安装完毕后就大功告成了，找到对应的客户端版本并安装，然后按照上面记下来的配置信息连接到你的SSR服务器就好了！</p>
+<p> Shadowsocks Android版下载</p>
+<p> Shadowsocks Windows版下载</p>
+<p>iOS的就自己想办法吧╮(╯▽╰)╭，用wingy或者shadowrocket都是极好的</p>
+<p>最后附一张YouTube 1080p 截图，祝大家翻墙愉快！</p>
+<p>vultr_ssr_18</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月27日 18:28</p>
-        <p>原始链接： <a class="post-url" href="/2018/12/25/问题随笔/Ubuntu删除多余内核/" title="Ubuntu删除多余内核">https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/</a></p>
+        <p>最后更新： 2018年12月31日 16:20</p>
+        <p>原始链接： <a class="post-url" href="/2018/12/31/问题随笔/科学上网/" title="科学上网">https://cwhong.top/2018/12/31/问题随笔/科学上网/</a></p>
         <footer>
             <a href="https://cwhong.top">
                 <img src="/images/logo.png" alt="cwhong">
@@ -217,7 +253,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/&title=《Ubuntu删除多余内核》 — cwhong's blog&pic=https://cwhong.topimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://cwhong.top/2018/12/31/问题随笔/科学上网/&title=《科学上网》 — cwhong's blog&pic=https://cwhong.topimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -227,22 +263,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/&title=《Ubuntu删除多余内核》 — cwhong's blog&source=个人博客网站" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://cwhong.top/2018/12/31/问题随笔/科学上网/&title=《科学上网》 — cwhong's blog&source=个人博客网站" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://cwhong.top/2018/12/31/问题随笔/科学上网/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu删除多余内核》 — cwhong's blog&url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/&via=https://cwhong.top" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《科学上网》 — cwhong's blog&url=https://cwhong.top/2018/12/31/问题随笔/科学上网/&via=https://cwhong.top" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://cwhong.top/2018/12/31/问题随笔/科学上网/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -252,7 +288,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://cwhong.top/2018/12/31/问题随笔/科学上网/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -277,28 +313,12 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一：首先查询当前我们使用的是内核是那个版本别删错了。"><span class="post-toc-text">第一：首先查询当前我们使用的是内核是那个版本别删错了。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二：查询系统中装了多少内核"><span class="post-toc-text">第二：查询系统中装了多少内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三：多余的内核可以通过命令删除-需要删除header和image"><span class="post-toc-text">第三：多余的内核可以通过命令删除 需要删除header和image</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第四：执行完上面命令后再次执行"><span class="post-toc-text">第四：执行完上面命令后再次执行</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          Ubuntu-有什么奇技淫巧
-        
-      </span>
-    </a>
   
-  
-    <a href="/2018/12/25/问题随笔/fedora-安装lantern/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">fedora-安装lantern</span>
+    <a href="/2018/12/25/程序日记本/杭电acm1051-Wooden-Sticks/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm1051-Wooden-Sticks</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
