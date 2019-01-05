@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-1c103e2d161f71f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-60015287549f78de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-ea01685559386fe8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-01-05T08:34:53.525Z">
+<meta property="og:updated_time" content="2019-01-05T08:44:05.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中 sys.argv[]的用法简明解释">
 <meta name="twitter:description" content="&amp;nbsp;    因为是看书自学的python,开始后不久就遇到了这个引入的模块函数，且一直在IDLE上编辑了后运行，试图从结果发现它的用途，然而结果一直都是没结果，也在网上查了许多，但发现这个问题的比较详细的解释只有一个版本，大部分都是转载和复制的。给的都是简明python教程上那个一长串代码的例子，说看了就明白了，可我看得晕头转向的还是没真正明白，只知道“sys.argv[0]表示代码本身文">
@@ -169,7 +169,7 @@
 <p>保存后，再从控制台窗口运行，这次我们加上一个参数，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># test.py what</span><br></pre></td></tr></table></figure></p>
 <p> <img src="http://upload-images.jianshu.io/upload_images/12110500-60015287549f78de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
 <p> 得到的结果就是我们输入的参数what，看到这里你是不是开始明白了呢。</p>
-<h3 id="3、多个参数"><a href="#3、多个参数" class="headerlink" title="3、多个参数"></a>3、多个参数</h3><p>那我们再把代码修改一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=sys.argv[2：]</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、多个参"><a href="#3、多个参" class="headerlink" title="3、多个参"></a>3、多个参</h3><p>那我们再把代码修改一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=sys.argv[2：]</span><br></pre></td></tr></table></figure></p>
 <p>保存后，再从控制台窗台运行程序，这次多加几个参数，以空格隔开:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># test.py a b c d e f</span><br></pre></td></tr></table></figure></p>
 <p> <img src="http://upload-images.jianshu.io/upload_images/12110500-ea01685559386fe8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
 <p>得到的结果为[‘b’, ’c’, ’d’, ’e’, ’f’]</p>
@@ -177,7 +177,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年01月05日 16:34</p>
+        <p>最后更新： 2019年01月05日 16:44</p>
         <p>原始链接： <a class="post-url" href="/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/" title="Python中 sys.argv[]的用法简明解释">https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/</a></p>
         <footer>
             <a href="https://cwhong.top">
@@ -299,7 +299,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、无参数"><span class="post-toc-text">1、无参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、一个参数"><span class="post-toc-text">2、一个参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、多个参数"><span class="post-toc-text">3、多个参数</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、无参数"><span class="post-toc-text">1、无参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、一个参数"><span class="post-toc-text">2、一个参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、多个参"><span class="post-toc-text">3、多个参</span></a></li></ol>
         </nav>
     </aside>
     
@@ -374,7 +374,7 @@
             <a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/程序日记本/">程序日记本</a><a class="category-link" href="/categories/问题随笔/">问题随笔</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/acm/" style="font-size: 17.5px;">acm</a> <a href="/tags/csp/" style="font-size: 12.5px;">csp</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/散文/" style="font-size: 10px;">散文</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/问题解决/" style="font-size: 15px;">问题解决</a>
+            <a href="/tags/acm/" style="font-size: 18px;">acm</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/csp/" style="font-size: 12px;">csp</a> <a href="/tags/fedora/" style="font-size: 12px;">fedora</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/qt/" style="font-size: 10px;">qt</a> <a href="/tags/ubuntu/" style="font-size: 14px;">ubuntu</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/散文/" style="font-size: 10px;">散文</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/问题解决/" style="font-size: 16px;">问题解决</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -407,7 +407,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/acm/" style="font-size: 17.5px;">acm</a> <a href="/tags/csp/" style="font-size: 12.5px;">csp</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/散文/" style="font-size: 10px;">散文</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/问题解决/" style="font-size: 15px;">问题解决</a>
+            <a href="/tags/acm/" style="font-size: 18px;">acm</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/csp/" style="font-size: 12px;">csp</a> <a href="/tags/fedora/" style="font-size: 12px;">fedora</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/qt/" style="font-size: 10px;">qt</a> <a href="/tags/ubuntu/" style="font-size: 14px;">ubuntu</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/散文/" style="font-size: 10px;">散文</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/问题解决/" style="font-size: 16px;">问题解决</a>
         </div>
     </div>
 </div>
