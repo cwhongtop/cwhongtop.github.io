@@ -3,28 +3,27 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Ubuntu-有什么奇技淫巧 | cwhong&#39;s blog</title>
+  <title>Python中 sys.argv[]的用法简明解释 | cwhong&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="cwhong's blog">
   
-  <meta name="description" content="&amp;nbsp; 一、 作者：xlzd链接：https://www.zhihu.com/question/27764060/answer/39459621来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。1sudo apt-get install cmatrix   输入密码，安装后，按F11把terminal全屏，输入『cmatrix -b』，逼格瞬间暴增，最好旁边有个妹">
-<meta name="keywords" content="博客,问题解决">
+  <meta name="description" content="&amp;nbsp;    因为是看书自学的python,开始后不久就遇到了这个引入的模块函数，且一直在IDLE上编辑了后运行，试图从结果发现它的用途，然而结果一直都是没结果，也在网上查了许多，但发现这个问题的比较详细的解释只有一个版本，大部分都是转载和复制的。给的都是简明python教程上那个一长串代码的例子，说看了就明白了，可我看得晕头转向的还是没真正明白，只知道“sys.argv[0]表示代码本身文">
+<meta name="keywords" content="博客,问题解决,python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu-有什么奇技淫巧">
-<meta property="og:url" content="https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/index.html">
+<meta property="og:title" content="Python中 sys.argv[]的用法简明解释">
+<meta property="og:url" content="https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/index.html">
 <meta property="og:site_name" content="cwhong&#39;s blog">
-<meta property="og:description" content="&amp;nbsp; 一、 作者：xlzd链接：https://www.zhihu.com/question/27764060/answer/39459621来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。1sudo apt-get install cmatrix   输入密码，安装后，按F11把terminal全屏，输入『cmatrix -b』，逼格瞬间暴增，最好旁边有个妹">
+<meta property="og:description" content="&amp;nbsp;    因为是看书自学的python,开始后不久就遇到了这个引入的模块函数，且一直在IDLE上编辑了后运行，试图从结果发现它的用途，然而结果一直都是没结果，也在网上查了许多，但发现这个问题的比较详细的解释只有一个版本，大部分都是转载和复制的。给的都是简明python教程上那个一长串代码的例子，说看了就明白了，可我看得晕头转向的还是没真正明白，只知道“sys.argv[0]表示代码本身文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-b2a1d94faaa2c3c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-b035b354dd7abc7d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-33876568a536e4b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-72f6826daf605573.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-12-27T10:36:32.167Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-1c103e2d161f71f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-60015287549f78de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/12110500-ea01685559386fe8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-01-05T08:34:53.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu-有什么奇技淫巧">
-<meta name="twitter:description" content="&amp;nbsp; 一、 作者：xlzd链接：https://www.zhihu.com/question/27764060/answer/39459621来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。1sudo apt-get install cmatrix   输入密码，安装后，按F11把terminal全屏，输入『cmatrix -b』，逼格瞬间暴增，最好旁边有个妹">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/12110500-b2a1d94faaa2c3c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Python中 sys.argv[]的用法简明解释">
+<meta name="twitter:description" content="&amp;nbsp;    因为是看书自学的python,开始后不久就遇到了这个引入的模块函数，且一直在IDLE上编辑了后运行，试图从结果发现它的用途，然而结果一直都是没结果，也在网上查了许多，但发现这个问题的比较详细的解释只有一个版本，大部分都是转载和复制的。给的都是简明python教程上那个一长串代码的例子，说看了就明白了，可我看得晕头转向的还是没真正明白，只知道“sys.argv[0]表示代码本身文">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/12110500-1c103e2d161f71f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -121,14 +120,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-问题随笔/Ubuntu-有什么奇技淫巧？" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-问题随笔/Python中sys.argv[]的用法简明解释" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      Ubuntu-有什么奇技淫巧
+      Python中 sys.argv[]的用法简明解释
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -141,7 +140,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-12-25
+          <i class="fa fa-calendar"></i>  2019-01-05
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -158,47 +157,28 @@
       
             
             <p>&nbsp;</p>
-<h3 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h3><blockquote>
-<p>作者：xlzd<br>链接：<a href="https://www.zhihu.com/question/27764060/answer/39459621" target="_blank" rel="noopener">https://www.zhihu.com/question/27764060/answer/39459621</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cmatrix</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>输入密码，安装后，按F11把terminal全屏，输入『cmatrix -b』，逼格瞬间暴增，最好旁边有个妹子。</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/12110500-b2a1d94faaa2c3c0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/12110500-b035b354dd7abc7d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<hr>
-<h3 id="二、"><a href="#二、" class="headerlink" title="二、"></a>二、</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install sl</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>安装后执行『sl』，怒看屏幕上一辆火车开过。</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/12110500-33876568a536e4b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/12110500-72f6826daf605573.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
-<hr>
-<h3 id="三、"><a href="#三、" class="headerlink" title="三、"></a>三、</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install figlet</span><br><span class="line">sudo apt-get install toilet</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>试一下这两个小命令，生成艺术字<br>figlet some text<br>toilet some other text<br>还可以添加颜色，man一下具体用法吧</p>
-</blockquote>
-<hr>
-<h3 id="四、"><a href="#四、" class="headerlink" title="四、"></a>四、</h3><blockquote>
-<p>xeyes<br>屏幕出现一双眼睛，直到你按下【ctrl + c】强制结束。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>yes<br>输出无穷无尽的字符，如【yes xlzd】将一直输出【xlzd】</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>factor<br>分解因数</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>fortune/<br>输出一句笑话/名言/诗文等等</p>
-</blockquote>
+<p>   因为是看书自学的python,开始后不久就遇到了这个引入的模块函数，且一直在IDLE上编辑了后运行，试图<br>从结果发现它的用途，然而结果一直都是没结果，也在网上查了许多，但发现这个问题的比较详细的解释只有一个版本，大部分都是转载和复制的。给的都是简明python教程上那个一长串代码的例子，说看了就明白了，可我看得晕头转向的还是没真正明白，只知道“sys.argv[0]表示代码本身文件路径”这点，其实还是不明其意。后来经过大量努力，多方求教才真正明悟了，谨以记录和分享，希望能从另一个角度给同在求索过程中的同学一点启发。</p>
+<p>　　sys.argv[]说白了就是一个从程序外部获取参数的桥梁，这个“外部”很关键，所以那些试图从代码来说明它作用的解释一直没看明白。因为我们从外部取得的参数可以是多个，所以获得的是一个列表（list)，也就是说sys.argv其实可以看作是一个列表，所以才能用[]提取其中的元素。其第一个元素是程序本身，随后才依次是外部给予的参数。</p>
+<h3 id="1、无参数"><a href="#1、无参数" class="headerlink" title="1、无参数"></a>1、无参数</h3><p>下面我们通过一个极简单的test.py程序的运行结果来说明它的用法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#test.py</span><br><span class="line">2</span><br><span class="line">3 import sys</span><br><span class="line">4 a=sys.argv[0]</span><br><span class="line">5 print(a)</span><br></pre></td></tr></table></figure>
+<p>将test.py保存在c盘的根目录下。</p>
+<p>在程序中找到 ‘运行’-&gt;点击-&gt;输入”cmd”-&gt;回车键   进入控制台命令窗口（如下图），先输入cd c:\   (作用是将命令路径改到c盘根目录)，然后输入test.py运行我们刚刚写的程序：</p>
+<p> <img src="http://upload-images.jianshu.io/upload_images/12110500-1c103e2d161f71f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>得到的结果是C:\test.py，这就是0指代码（即此.py程序）本身的意思。</p>
+<h3 id="2、一个参数"><a href="#2、一个参数" class="headerlink" title="2、一个参数"></a>2、一个参数</h3><p>然后我们将代码中0改为1 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=sys.argv[1]</span><br></pre></td></tr></table></figure></p>
+<p>保存后，再从控制台窗口运行，这次我们加上一个参数，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># test.py what</span><br></pre></td></tr></table></figure></p>
+<p> <img src="http://upload-images.jianshu.io/upload_images/12110500-60015287549f78de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p> 得到的结果就是我们输入的参数what，看到这里你是不是开始明白了呢。</p>
+<h3 id="3、多个参数"><a href="#3、多个参数" class="headerlink" title="3、多个参数"></a>3、多个参数</h3><p>那我们再把代码修改一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=sys.argv[2：]</span><br></pre></td></tr></table></figure></p>
+<p>保存后，再从控制台窗台运行程序，这次多加几个参数，以空格隔开:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># test.py a b c d e f</span><br></pre></td></tr></table></figure></p>
+<p> <img src="http://upload-images.jianshu.io/upload_images/12110500-ea01685559386fe8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>得到的结果为[‘b’, ’c’, ’d’, ’e’, ’f’]</p>
+<p>应该大彻大悟了吧。Sys.argv[ ]其实就是一个列表，里边的项为用户输入的参数，关键就是要明白这参数是从程序外部输入的，而非代码本身的什么地方，要想看到它的效果就应该将程序保存了，从外部来运行程序并给出参数。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年12月27日 18:36</p>
-        <p>原始链接： <a class="post-url" href="/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/" title="Ubuntu-有什么奇技淫巧">https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/</a></p>
+        <p>最后更新： 2019年01月05日 16:34</p>
+        <p>原始链接： <a class="post-url" href="/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/" title="Python中 sys.argv[]的用法简明解释">https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/</a></p>
         <footer>
             <a href="https://cwhong.top">
                 <img src="/images/logo.png" alt="cwhong">
@@ -255,7 +235,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/&title=《Ubuntu-有什么奇技淫巧》 — cwhong's blog&pic=https://cwhong.topimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/&title=《Python中 sys.argv[]的用法简明解释》 — cwhong's blog&pic=https://cwhong.topimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -265,22 +245,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/&title=《Ubuntu-有什么奇技淫巧》 — cwhong's blog&source=个人博客网站" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/&title=《Python中 sys.argv[]的用法简明解释》 — cwhong's blog&source=个人博客网站" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu-有什么奇技淫巧》 — cwhong's blog&url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/&via=https://cwhong.top" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python中 sys.argv[]的用法简明解释》 — cwhong's blog&url=https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/&via=https://cwhong.top" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -290,7 +270,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://cwhong.top/2018/12/25/问题随笔/Ubuntu-有什么奇技淫巧？/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://cwhong.top/2019/01/05/问题随笔/Python中sys.argv[]的用法简明解释/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -306,6 +286,8 @@
       
     <a href="/tags/问题解决/" class="color5">问题解决</a>
       
+    <a href="/tags/python/" class="color2">python</a>
+      
   </li>
 
         </ul>
@@ -317,26 +299,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、"><span class="post-toc-text">一、</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、"><span class="post-toc-text">二、</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三、"><span class="post-toc-text">三、</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四、"><span class="post-toc-text">四、</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、无参数"><span class="post-toc-text">1、无参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、一个参数"><span class="post-toc-text">2、一个参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、多个参数"><span class="post-toc-text">3、多个参数</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/杭电acm1597-find-the-nth-digit/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          杭电acm1597-find-the-nth-digit
-        
-      </span>
-    </a>
   
-  
-    <a href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Ubuntu16.04安装QQ（for linux）</span>
+    <a href="/2018/12/31/问题随笔/科学上网/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">科学上网</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
