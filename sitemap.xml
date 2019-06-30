@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cwhong.top/2017/08/01/hello-world/</loc>
+    <loc>https://cwhong.top/2018/12/25/hello-world/</loc>
     
-    <lastmod>2019-06-30T03:15:08.187Z</lastmod>
+    <lastmod>2019-06-30T03:25:52.931Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cwhong.top/2018/12/24/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/installation-configuration/</loc>
+    
+    <lastmod>2019-06-30T03:24:34.545Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://cwhong.top/2018/12/25/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/linux%E5%92%8Cwindows%E4%B8%AD%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91qt%E7%A8%8B%E5%BA%8F%E6%AD%A5%E9%AA%A4/</loc>
     
     <lastmod>2019-01-05T08:43:58.948Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cwhong.top/2018/12/24/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/installation-configuration/</loc>
-    
-    <lastmod>2019-01-05T08:43:50.420Z</lastmod>
     
   </url>
   

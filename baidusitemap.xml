@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cwhong.top/2017/08/01/hello-world/</loc>
-    <lastmod>2019-06-30T03:15:08.187Z</lastmod>
+    <loc>https://cwhong.top/2018/12/25/hello-world/</loc>
+    <lastmod>2019-06-30T03:25:52.931Z</lastmod>
+  </url>  <url>
+    <loc>https://cwhong.top/2018/12/24/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/installation-configuration/</loc>
+    <lastmod>2019-06-30T03:24:34.545Z</lastmod>
   </url>  <url>
     <loc>https://cwhong.top/2019/06/29/%E6%97%A5%E5%B8%B8/Typora%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2019-06-29T05:13:21.452Z</lastmod>
@@ -21,9 +24,6 @@
   </url>  <url>
     <loc>https://cwhong.top/2018/12/25/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/linux%E5%92%8Cwindows%E4%B8%AD%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91qt%E7%A8%8B%E5%BA%8F%E6%AD%A5%E9%AA%A4/</loc>
     <lastmod>2019-01-05T08:43:58.948Z</lastmod>
-  </url>  <url>
-    <loc>https://cwhong.top/2018/12/24/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/installation-configuration/</loc>
-    <lastmod>2019-01-05T08:43:50.420Z</lastmod>
   </url>  <url>
     <loc>https://cwhong.top/2018/12/25/%E9%97%AE%E9%A2%98%E9%9A%8F%E7%AC%94/fedora%E5%88%A0%E9%99%A4%E5%A4%9A%E4%BD%99%E4%B8%8D%E7%94%A8%E7%9A%84%E5%86%85%E6%A0%B8/</loc>
     <lastmod>2019-01-05T08:43:43.740Z</lastmod>
