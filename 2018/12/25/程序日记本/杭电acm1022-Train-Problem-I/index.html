@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>杭电acm1022-Train-Problem-I | cwhong&#39;s blog</title>
@@ -50,17 +50,17 @@
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
-                    <a href="/">
+                    <a  href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
                     
-                    <a href="/archives">
+                    <a  href="/archives">
                         <i class="fa fa-archive"></i>
                         <span>Archives</span>
                     </a>
                     
-                    <a href="/about">
+                    <a  href="/about">
                         <i class="fa fa-user"></i>
                         <span>About</span>
                     </a>
@@ -120,7 +120,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm1022-Train-Problem-I" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm1022-Train-Problem-I" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -164,6 +164,7 @@
 <p>//栈和队列的使用</p>
 </blockquote>
 <h3 id="三、Code"><a href="#三、Code" class="headerlink" title="三、Code"></a>三、Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">*date:2017.11.09</span><br><span class="line">*author:孟小德</span><br><span class="line">*function:蓝桥杯试题</span><br><span class="line">*   模拟栈</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class acm1022</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner input = new Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;int[]&gt; resultList = new ArrayList&lt;int[]&gt;();</span><br><span class="line">        while (input.hasNextInt())</span><br><span class="line">        &#123;</span><br><span class="line">            int num = input.nextInt();</span><br><span class="line"></span><br><span class="line">            String pushstring = input.next();</span><br><span class="line">            String popstring = input.next();</span><br><span class="line"></span><br><span class="line">            String[] pushStr = new String[num];</span><br><span class="line">            String[] popStr = new String[num];</span><br><span class="line">            Stack&lt;String&gt; stack = new Stack&lt;String&gt;();</span><br><span class="line">            int[] result = new int[2*num + 1];</span><br><span class="line"></span><br><span class="line">            //分割字符串</span><br><span class="line">            for (int i=0;i&lt;num;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                pushStr[i] = pushstring.substring(i,i+1);</span><br><span class="line">                popStr[i] = popstring.substring(i,i+1);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            result[0] = 1;</span><br><span class="line">            int pop_index = 0;</span><br><span class="line">            int push_index = 0;</span><br><span class="line">            int j = 1;</span><br><span class="line">            while (pop_index != num)</span><br><span class="line">            &#123;</span><br><span class="line">                if (stack.empty() == true &amp;&amp; push_index != num)</span><br><span class="line">                &#123;</span><br><span class="line">                    stack.push(pushStr[push_index]);</span><br><span class="line">                    push_index++;</span><br><span class="line">                    result[j] = 1;</span><br><span class="line">                    j++;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (stack.empty() == false &amp;&amp; push_index !=num)</span><br><span class="line">                &#123;</span><br><span class="line">                    if (popStr[pop_index].equals(stack.peek()))</span><br><span class="line">                    &#123;</span><br><span class="line">                        stack.pop();</span><br><span class="line">                        pop_index++;</span><br><span class="line">                        result[j] = -1;</span><br><span class="line">                        j++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        stack.push(pushStr[push_index]);</span><br><span class="line">                        push_index++;</span><br><span class="line">                        result[j] = 1;</span><br><span class="line">                        j++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (stack.empty() == false &amp;&amp; push_index ==num)</span><br><span class="line">                &#123;</span><br><span class="line">                    if (popStr[pop_index].equals(stack.peek()))</span><br><span class="line">                    &#123;</span><br><span class="line">                        stack.pop();</span><br><span class="line">                        pop_index++;</span><br><span class="line">                        result[j] = -1;</span><br><span class="line">                        j++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        result[0] = 0;</span><br><span class="line">                        break;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                &#123;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            resultList.add(result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //输出结果</span><br><span class="line">        for (int k = 0;k&lt;resultList.size();k++)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            if (resultList.get(k)[0] == 1)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;Yes.&quot;);</span><br><span class="line">                for (int i=1;i&lt;resultList.get(k).length;i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    if (resultList.get(k)[i] == 1)</span><br><span class="line">                    &#123;</span><br><span class="line">                        System.out.println(&quot;in&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        System.out.println(&quot;out&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(&quot;No.&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;FINISH&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
@@ -294,19 +295,19 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/杭电acm1010-Tempter-of-the-Bone/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/程序日记本/杭电acm1062-Text-Reverse/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          杭电acm1010-Tempter-of-the-Bone
+          杭电acm1062-Text-Reverse
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/程序日记本/杭电acm1026-Ignatius-and-the-Princess-I/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">杭电acm1026-Ignatius-and-the-Princess</span>
+    <a href="/2018/12/25/程序日记本/杭电acm1010-Tempter-of-the-Bone/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm1010-Tempter-of-the-Bone</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -324,10 +325,10 @@
     <div id="footer-info" class="inner">
       
 <p>
-    <span id="busuanzi_container_site_uv" style="display:none">
+    <span id="busuanzi_container_site_uv" style='display:none'>
         总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
+    <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
@@ -383,19 +384,19 @@
         <ul class="mobile-header-menu-navbar">
             
             <li>
-                <a href="/">
+                <a  href="/">
                     <i class="fa fa-home"></i><span>Home</span>
                 </a>
             </li>
             
             <li>
-                <a href="/archives">
+                <a  href="/archives">
                     <i class="fa fa-archive"></i><span>Archives</span>
                 </a>
             </li>
             
             <li>
-                <a href="/about">
+                <a  href="/about">
                     <i class="fa fa-user"></i><span>About</span>
                 </a>
             </li>

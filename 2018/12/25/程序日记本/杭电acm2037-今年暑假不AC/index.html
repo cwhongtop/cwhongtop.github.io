@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>杭电acm2037-今年暑假不AC | cwhong&#39;s blog</title>
@@ -46,17 +46,17 @@
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
-                    <a href="/">
+                    <a  href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
                     
-                    <a href="/archives">
+                    <a  href="/archives">
                         <i class="fa fa-archive"></i>
                         <span>Archives</span>
                     </a>
                     
-                    <a href="/about">
+                    <a  href="/about">
                         <i class="fa fa-user"></i>
                         <span>About</span>
                     </a>
@@ -116,7 +116,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm2037-今年暑假不AC" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm2037-今年暑假不AC" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -160,6 +160,7 @@
 <p>贪心问题，按节目结束时间排序，当前节目的开始时间要晚于前一个节目的结束时间</p>
 </blockquote>
 <h3 id="三、Code"><a href="#三、Code" class="headerlink" title="三、Code"></a>三、Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * date:2017.11.16</span><br><span class="line"> * author:孟小德</span><br><span class="line"> * function:杭电acm2037</span><br><span class="line"> *  今年暑假不AC</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class acm2037</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner input = new  Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        int num;</span><br><span class="line">        while((num = input.nextInt()) != 0)</span><br><span class="line">        &#123;</span><br><span class="line">            int[][] gram = new int[num][2];</span><br><span class="line">            for (int i = 0;i&lt;num;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                gram[i][0] = input.nextInt();</span><br><span class="line">                gram[i][1] = input.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            //排序</span><br><span class="line">            sort(gram);</span><br><span class="line"></span><br><span class="line">            int count = 1;</span><br><span class="line">            int end = gram[0][1];</span><br><span class="line">            for (int i=1;i&lt;num;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                if (gram[i][0] &gt;= end)</span><br><span class="line">                &#123;</span><br><span class="line">                    end = gram[i][1];</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(count);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //按节目结束时间由早到晚排序</span><br><span class="line">    public static void sort(int[][] gram)</span><br><span class="line">    &#123;</span><br><span class="line">        boolean flag = true;</span><br><span class="line">        int[] temp = new int[2];</span><br><span class="line">        for (int i = 0;i&lt;gram.length &amp;&amp; flag;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            flag = false;</span><br><span class="line">            for (int j = 0;j&lt;gram.length-i-1;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                if (gram[j][1] &gt; gram[j+1][1])</span><br><span class="line">                &#123;</span><br><span class="line">                    temp[0] = gram[j][0];</span><br><span class="line">                    temp[1] = gram[j][1];</span><br><span class="line"></span><br><span class="line">                    gram[j][0] = gram[j+1][0];</span><br><span class="line">                    gram[j][1] = gram[j+1][1];</span><br><span class="line"></span><br><span class="line">                    gram[j+1][0] = temp[0];</span><br><span class="line">                    gram[j+1][1] = temp[1];</span><br><span class="line">                    flag = true;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
@@ -290,19 +291,19 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/杭电acm1874-畅通工程续/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/程序日记本/杭电acm1863-畅通工程/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          杭电acm1874-畅通工程续
+          杭电acm1863-畅通工程
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/程序日记本/杭电acm2111-Saving-HDU/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">杭电acm2111-Saving-HDU</span>
+    <a href="/2018/12/25/程序日记本/杭电acm1874-畅通工程续/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm1874-畅通工程续</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -320,10 +321,10 @@
     <div id="footer-info" class="inner">
       
 <p>
-    <span id="busuanzi_container_site_uv" style="display:none">
+    <span id="busuanzi_container_site_uv" style='display:none'>
         总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
+    <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
@@ -379,19 +380,19 @@
         <ul class="mobile-header-menu-navbar">
             
             <li>
-                <a href="/">
+                <a  href="/">
                     <i class="fa fa-home"></i><span>Home</span>
                 </a>
             </li>
             
             <li>
-                <a href="/archives">
+                <a  href="/archives">
                     <i class="fa fa-archive"></i><span>Archives</span>
                 </a>
             </li>
             
             <li>
-                <a href="/about">
+                <a  href="/about">
                     <i class="fa fa-user"></i><span>About</span>
                 </a>
             </li>

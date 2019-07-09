@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>csp-2017-09-02-公共钥匙盒 | cwhong&#39;s blog</title>
@@ -46,17 +46,17 @@
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
-                    <a href="/">
+                    <a  href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
                     
-                    <a href="/archives">
+                    <a  href="/archives">
                         <i class="fa fa-archive"></i>
                         <span>Archives</span>
                     </a>
                     
-                    <a href="/about">
+                    <a  href="/about">
                         <i class="fa fa-user"></i>
                         <span>About</span>
                     </a>
@@ -116,7 +116,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-程序日记本/csp-2017-09-02公共钥匙盒" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-程序日记本/csp-2017-09-02公共钥匙盒" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -160,6 +160,7 @@
 <p>注：因为同一个老师一定是先借钥匙再还钥匙，所以借与还不存在矛盾，将所有老师借钥匙与还钥匙按时间排序，并且同时有多个老师还钥匙时按钥匙编号顺序排序，然后按序进行借与还的操作。本题中使用结构体，以及比较函数用sort进行排序操作。最终结果只得70分，有待后续改进。</p>
 </blockquote>
 <h3 id="三、Code"><a href="#三、Code" class="headerlink" title="三、Code"></a>三、Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">/*****************************************</span><br><span class="line">Filename:	Main</span><br><span class="line">Author:		cwhong</span><br><span class="line">Date:		2018.07.06</span><br><span class="line">Description:csp2017-09-2,公共钥匙盒</span><br><span class="line"></span><br><span class="line">******************************************/</span><br><span class="line"></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int key[1001];</span><br><span class="line"></span><br><span class="line">typedef struct Teacher</span><br><span class="line">&#123;</span><br><span class="line">	// type 为0表示该老师是借，1则是还</span><br><span class="line">	int type;</span><br><span class="line">	// time 表示老师借或者还钥匙的时间</span><br><span class="line">	int time;</span><br><span class="line">	// key 表示该钥匙的编号</span><br><span class="line">	int key;</span><br><span class="line">&#125;t;</span><br><span class="line"></span><br><span class="line">t teacher[2002];</span><br><span class="line"></span><br><span class="line">bool Compare(t a,t b)</span><br><span class="line">&#123;</span><br><span class="line">	// return a.time &lt; b.time;</span><br><span class="line">	if (a.time &lt; b.time)</span><br><span class="line">	&#123;</span><br><span class="line">		// 首先按使用时间排序</span><br><span class="line">		return a.time &gt; b.time;</span><br><span class="line">	&#125;</span><br><span class="line">	else if (a.time == b.time)</span><br><span class="line">	&#123;</span><br><span class="line">		// 时间相同则还钥匙在前</span><br><span class="line">		if (a.type &lt; b.type)</span><br><span class="line">		&#123;</span><br><span class="line">			return true;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (a.type == 1 &amp;&amp; b.type == 1)</span><br><span class="line">		&#123;</span><br><span class="line">			// 同时有多把钥匙要还则按钥匙编号从小到大顺序还</span><br><span class="line">			return a.key &gt; b.key;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void KeyFunction(int key_num,int teacher_num)</span><br><span class="line">&#123;</span><br><span class="line">	int i,j,k;</span><br><span class="line">	for (i=teacher_num*2;i&gt;=1;i--)</span><br><span class="line">	&#123;</span><br><span class="line">		if (teacher[i].type == 0)</span><br><span class="line">		&#123;</span><br><span class="line">			for (j=1;j&lt;=key_num;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				if (teacher[i].key == key[j])</span><br><span class="line">				&#123;</span><br><span class="line">					key[j] = 0;</span><br><span class="line">					break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (teacher[i].type == 1)</span><br><span class="line">		&#123;</span><br><span class="line">			for (j=1;j&lt;=key_num;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				if (key[j] == 0)</span><br><span class="line">				&#123;</span><br><span class="line">					key[j] = teacher[i].key;</span><br><span class="line">					break;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">	// 钥匙数量，老师数量</span><br><span class="line">	int key_num,teacher_num;</span><br><span class="line">	cin&gt;&gt;key_num&gt;&gt;teacher_num;</span><br><span class="line"></span><br><span class="line">	int i,j,k;</span><br><span class="line">	for (i=1;i&lt;=key_num;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		key[i] = i;</span><br><span class="line">	&#125;</span><br><span class="line">	int a,b,c;</span><br><span class="line">	for (i=1;i&lt;=teacher_num;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">		teacher[i*2 - 1].type = 0;</span><br><span class="line">		teacher[i*2 - 1].time = b;</span><br><span class="line">		teacher[i*2 - 1].key = a;</span><br><span class="line">		teacher[i*2].type = 1;</span><br><span class="line">		teacher[i*2].time = b+c;</span><br><span class="line">		teacher[i*2].key = a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// cout&lt;&lt;endl;</span><br><span class="line">	// for (i=1;i&lt;=teacher_num*2;i++)</span><br><span class="line">	// &#123;</span><br><span class="line">	// 	cout&lt;&lt;teacher[i].type&lt;&lt;&quot; &quot;&lt;&lt;teacher[i].time&lt;&lt;&quot; &quot;&lt;&lt;teacher[i].key&lt;&lt;endl;</span><br><span class="line">	// &#125;</span><br><span class="line">	// cout&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">	sort(teacher + 1,teacher + teacher_num*2 + 1,Compare);</span><br><span class="line"></span><br><span class="line">	// for (i=1;i&lt;=teacher_num*2;i++)</span><br><span class="line">	// &#123;</span><br><span class="line">	// 	cout&lt;&lt;teacher[i].type&lt;&lt;&quot; &quot;&lt;&lt;teacher[i].time&lt;&lt;&quot; &quot;&lt;&lt;teacher[i].key&lt;&lt;endl;</span><br><span class="line">	// &#125;</span><br><span class="line">	// cout&lt;&lt;endl;</span><br><span class="line">	KeyFunction(key_num,teacher_num);</span><br><span class="line"></span><br><span class="line">	for (i=1;i&lt;=key_num;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;key[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
@@ -290,19 +291,19 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/csp-2014-12-02Z字形扫描/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/程序日记本/杭电acm1009-FatMouse'Trade/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          csp-2014-12-02-Z字形扫描
+          杭电acm1009-FatMouse&#39;Trade
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/程序日记本/杭电acm1009-FatMouse'Trade/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">杭电acm1009-FatMouse&#39;Trade</span>
+    <a href="/2018/12/25/程序日记本/杭电acm1026-Ignatius-and-the-Princess-I/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm1026-Ignatius-and-the-Princess</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -320,10 +321,10 @@
     <div id="footer-info" class="inner">
       
 <p>
-    <span id="busuanzi_container_site_uv" style="display:none">
+    <span id="busuanzi_container_site_uv" style='display:none'>
         总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
+    <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
@@ -379,19 +380,19 @@
         <ul class="mobile-header-menu-navbar">
             
             <li>
-                <a href="/">
+                <a  href="/">
                     <i class="fa fa-home"></i><span>Home</span>
                 </a>
             </li>
             
             <li>
-                <a href="/archives">
+                <a  href="/archives">
                     <i class="fa fa-archive"></i><span>Archives</span>
                 </a>
             </li>
             
             <li>
-                <a href="/about">
+                <a  href="/about">
                     <i class="fa fa-user"></i><span>About</span>
                 </a>
             </li>

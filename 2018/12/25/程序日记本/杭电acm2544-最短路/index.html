@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>杭电acm2544-最短路 | cwhong&#39;s blog</title>
@@ -46,17 +46,17 @@
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
-                    <a href="/">
+                    <a  href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
                     
-                    <a href="/archives">
+                    <a  href="/archives">
                         <i class="fa fa-archive"></i>
                         <span>Archives</span>
                     </a>
                     
-                    <a href="/about">
+                    <a  href="/about">
                         <i class="fa fa-user"></i>
                         <span>About</span>
                     </a>
@@ -116,7 +116,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm2544-最短路" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm2544-最短路" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -160,6 +160,7 @@
 <p>一个简单的最短路问题，用dijkstra,floyd等都可以解，我一开始用的是并查集但是出错了</p>
 </blockquote>
 <h3 id="三、Code"><a href="#三、Code" class="headerlink" title="三、Code"></a>三、Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">package acm2544;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * date:2017.12.18</span><br><span class="line"> * author:孟小德</span><br><span class="line"> * function:杭电acm2544 最短路</span><br><span class="line"> *  最小生成树，并查集</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class Main</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public static int MAXINT = 200000000;   //最大长度表示无法联通</span><br><span class="line">    public static int NUM_OF_NODE;      //城镇的数量</span><br><span class="line">    public static int NUM_OF_EDGE;      //道路的数量</span><br><span class="line">    public static int[] PATH;           //记录到每个城镇的最短路径</span><br><span class="line">    public static int[][] MAP;          //一个二维数组记录城镇的道路情况</span><br><span class="line">    public static boolean[] S;</span><br><span class="line"></span><br><span class="line">    public static void dijkstra(int v0)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int i=1;i&lt;=NUM_OF_NODE;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            PATH[i] = MAP[v0][i];</span><br><span class="line">            S[i] = false;</span><br><span class="line">        &#125;</span><br><span class="line">        PATH[v0] = 0;</span><br><span class="line">        S[v0] = true;</span><br><span class="line">        for (int i=2;i&lt;=NUM_OF_NODE;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            int minpath = MAXINT;</span><br><span class="line">            int u = v0;</span><br><span class="line"></span><br><span class="line">            for (int j=1;j&lt;=NUM_OF_NODE;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                if (S[j] == false &amp;&amp; PATH[j] &lt; minpath)</span><br><span class="line">                &#123;</span><br><span class="line">                    u = j;</span><br><span class="line">                    minpath = PATH[j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            S[u] = true;    //找到的当前点</span><br><span class="line">            // System.out.println(u);</span><br><span class="line"></span><br><span class="line">            for (int j=1;j&lt;=NUM_OF_NODE;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                if (S[j] == false &amp;&amp; MAP[u][j] &lt; MAXINT)</span><br><span class="line">                &#123;//通过当前点u找到其他点到v0的最短路径</span><br><span class="line">                    // System.out.println(&quot;#&quot;);</span><br><span class="line">                    // System.out.println(u + &quot; &quot; + j);</span><br><span class="line">                    // System.out.println(PATH[j]);</span><br><span class="line">                    // System.out.println(PATH[u] + &quot; &quot; + MAP[u][j]);</span><br><span class="line">                    if (PATH[u] + MAP[u][j] &lt; PATH[j])</span><br><span class="line">                    &#123;</span><br><span class="line">                        PATH[j] = PATH[u] + MAP[u][j]; //更新最短路径</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner input = new Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        NUM_OF_NODE = input.nextInt();</span><br><span class="line">        NUM_OF_EDGE = input.nextInt();</span><br><span class="line">        while (NUM_OF_NODE != 0 || NUM_OF_NODE != 0)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            MAP = new int[NUM_OF_NODE + 1][NUM_OF_NODE + 1];</span><br><span class="line">            PATH = new int[NUM_OF_NODE + 1];</span><br><span class="line">            S = new boolean[NUM_OF_NODE + 1];</span><br><span class="line">            for (int i=1;i&lt;=NUM_OF_NODE;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                // PATH[i] = MAXINT;</span><br><span class="line">                // S[i] = false;</span><br><span class="line">                for (int j=1;j&lt;=NUM_OF_NODE;j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    MAP[i][j] = MAXINT;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            for (int i=0;i&lt;NUM_OF_EDGE;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                int A = input.nextInt();</span><br><span class="line">                int B = input.nextInt();</span><br><span class="line">                int X = input.nextInt();</span><br><span class="line"></span><br><span class="line">                if (MAP[A][B] &gt; X)</span><br><span class="line">                &#123;</span><br><span class="line">                    MAP[A][B] = X;</span><br><span class="line">                    MAP[B][A] = X;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            dijkstra(1);</span><br><span class="line"></span><br><span class="line">            System.out.println(PATH[NUM_OF_NODE]);</span><br><span class="line"></span><br><span class="line">            NUM_OF_NODE = input.nextInt();</span><br><span class="line">            NUM_OF_EDGE = input.nextInt();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        input.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
@@ -290,12 +291,12 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/杭电acm2124-Repair-the-Wall/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/程序日记本/杭电acm2111-Saving-HDU/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          杭电acm2124-Repair-the-Wall
+          杭电acm2111-Saving-HDU
         
       </span>
     </a>
@@ -320,10 +321,10 @@
     <div id="footer-info" class="inner">
       
 <p>
-    <span id="busuanzi_container_site_uv" style="display:none">
+    <span id="busuanzi_container_site_uv" style='display:none'>
         总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
+    <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
@@ -379,19 +380,19 @@
         <ul class="mobile-header-menu-navbar">
             
             <li>
-                <a href="/">
+                <a  href="/">
                     <i class="fa fa-home"></i><span>Home</span>
                 </a>
             </li>
             
             <li>
-                <a href="/archives">
+                <a  href="/archives">
                     <i class="fa fa-archive"></i><span>Archives</span>
                 </a>
             </li>
             
             <li>
-                <a href="/about">
+                <a  href="/about">
                     <i class="fa fa-user"></i><span>About</span>
                 </a>
             </li>

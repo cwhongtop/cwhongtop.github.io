@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>杭电acm1257-最少拦截系统 | cwhong&#39;s blog</title>
@@ -46,17 +46,17 @@
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
-                    <a href="/">
+                    <a  href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
                     
-                    <a href="/archives">
+                    <a  href="/archives">
                         <i class="fa fa-archive"></i>
                         <span>Archives</span>
                     </a>
                     
-                    <a href="/about">
+                    <a  href="/about">
                         <i class="fa fa-user"></i>
                         <span>About</span>
                     </a>
@@ -116,7 +116,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm1257-最少拦截系统" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-程序日记本/杭电acm1257-最少拦截系统" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -160,6 +160,7 @@
 <p>//这道题其实并不复杂我之前写的时候想复杂了，后来看了同学代码才发现自己想复杂了，其实就是在拦截时能用已有的系统拦截就用已有的系统拦截，如果不能就新加一个系统，在有多个系统时从拦截高度最低的系统开始用</p>
 </blockquote>
 <h3 id="三、Code"><a href="#三、Code" class="headerlink" title="三、Code"></a>三、Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">package acm1257;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * date:2017.11.15</span><br><span class="line"> * author:孟小德</span><br><span class="line"> * function:杭电acm1257</span><br><span class="line"> *  最少拦截系统</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public class Main</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Scanner input = new Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        int result;</span><br><span class="line">        while (input.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            int num = input.nextInt();</span><br><span class="line">            int gd = input.nextInt(); //  导弹的高度</span><br><span class="line">            //  记录拦截系统</span><br><span class="line">            ArrayList&lt;Integer&gt; syslist = new ArrayList&lt;Integer&gt;();</span><br><span class="line">            syslist.add(gd);</span><br><span class="line">            for (int i=1;i&lt;num;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                gd = input.nextInt();</span><br><span class="line">                boolean flag = false;   //  记录导弹是否被拦截</span><br><span class="line">                for (int j=0;j&lt;syslist.size();j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    if (gd &lt;= syslist.get(j))</span><br><span class="line">                    &#123;</span><br><span class="line">                        syslist.set(j,gd);</span><br><span class="line">                        flag = true;</span><br><span class="line">                        break;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (flag == false)</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line">                    syslist.add(gd);</span><br><span class="line">                &#125;</span><br><span class="line">                Collections.sort(syslist);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            result = syslist.size();</span><br><span class="line"></span><br><span class="line">            System.out.println(result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        input.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
@@ -290,19 +291,19 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/程序日记本/杭电acm1180-诡异的楼梯/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/程序日记本/杭电acm1232-畅通工程/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          杭电acm1180-诡异的楼梯
+          杭电acm1232-畅通工程
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/程序日记本/杭电acm1232-畅通工程/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">杭电acm1232-畅通工程</span>
+    <a href="/2018/12/25/程序日记本/杭电acm1276-士兵队列训练问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">杭电acm1276-士兵队列训练问题</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -320,10 +321,10 @@
     <div id="footer-info" class="inner">
       
 <p>
-    <span id="busuanzi_container_site_uv" style="display:none">
+    <span id="busuanzi_container_site_uv" style='display:none'>
         总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
+    <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
@@ -379,19 +380,19 @@
         <ul class="mobile-header-menu-navbar">
             
             <li>
-                <a href="/">
+                <a  href="/">
                     <i class="fa fa-home"></i><span>Home</span>
                 </a>
             </li>
             
             <li>
-                <a href="/archives">
+                <a  href="/archives">
                     <i class="fa fa-archive"></i><span>Archives</span>
                 </a>
             </li>
             
             <li>
-                <a href="/about">
+                <a  href="/about">
                     <i class="fa fa-user"></i><span>About</span>
                 </a>
             </li>

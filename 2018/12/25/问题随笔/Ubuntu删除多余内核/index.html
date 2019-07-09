@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>Ubuntu删除多余内核 | cwhong&#39;s blog</title>
@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="cwhong's blog">
   
-  <meta name="description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
+  <meta name="description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a  第二：查询系统中装了多少内核1dpkg --get-selections|grep linux  第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get re">
 <meta name="keywords" content="博客,问题解决,ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu删除多余内核">
 <meta property="og:url" content="https://cwhong.top/2018/12/25/问题随笔/Ubuntu删除多余内核/index.html">
 <meta property="og:site_name" content="cwhong&#39;s blog">
-<meta property="og:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
+<meta property="og:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a  第二：查询系统中装了多少内核1dpkg --get-selections|grep linux  第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get re">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-01-05T08:44:21.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu删除多余内核">
-<meta name="twitter:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a 第二：查询系统中装了多少内核1dpkg --get-selections|grep linux 第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get remo">
+<meta name="twitter:description" content="&amp;nbsp; 第一：首先查询当前我们使用的是内核是那个版本别删错了。1uname -a  第二：查询系统中装了多少内核1dpkg --get-selections|grep linux  第三：多余的内核可以通过命令删除 需要删除header和image12sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）sudo apt-get re">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -46,17 +46,17 @@
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
-                    <a href="/">
+                    <a  href="/">
                         <i class="fa fa-home"></i>
                         <span>Home</span>
                     </a>
                     
-                    <a href="/archives">
+                    <a  href="/archives">
                         <i class="fa fa-archive"></i>
                         <span>Archives</span>
                     </a>
                     
-                    <a href="/about">
+                    <a  href="/about">
                         <i class="fa fa-user"></i>
                         <span>About</span>
                     </a>
@@ -116,7 +116,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-问题随笔/Ubuntu删除多余内核" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-问题随笔/Ubuntu删除多余内核" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -154,11 +154,19 @@
             
             <p>&nbsp;</p>
 <h3 id="第一：首先查询当前我们使用的是内核是那个版本别删错了。"><a href="#第一：首先查询当前我们使用的是内核是那个版本别删错了。" class="headerlink" title="第一：首先查询当前我们使用的是内核是那个版本别删错了。"></a>第一：首先查询当前我们使用的是内核是那个版本别删错了。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure>
+
 <h3 id="第二：查询系统中装了多少内核"><a href="#第二：查询系统中装了多少内核" class="headerlink" title="第二：查询系统中装了多少内核"></a>第二：查询系统中装了多少内核</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure>
+
 <h3 id="第三：多余的内核可以通过命令删除-需要删除header和image"><a href="#第三：多余的内核可以通过命令删除-需要删除header和image" class="headerlink" title="第三：多余的内核可以通过命令删除 需要删除header和image"></a>第三：多余的内核可以通过命令删除 需要删除header和image</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove linux-image-*.*.*-**（*号用你想删除的实际情况改写）</span><br><span class="line">sudo apt-get remove linux-headers-*.*.*-**（*号用你想删除的实际情况改写）</span><br></pre></td></tr></table></figure>
+
 <h3 id="第四：执行完上面命令后再次执行"><a href="#第四：执行完上面命令后再次执行" class="headerlink" title="第四：执行完上面命令后再次执行"></a>第四：执行完上面命令后再次执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections|grep linux</span><br></pre></td></tr></table></figure>
-<p>查看内核是否都删除干净了。没干净继续删除。有的内核后面会显示是deinstall 那需要通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections | grep deinstall | sed &apos;s/deinstall/\lpurge/&apos; | sudo dpkg --set-selections; sudo dpkg -Pa</span><br></pre></td></tr></table></figure></p>
-<p>通过上面方法就可以。<br>还有一种通过正则表达式匹配内核然后除最新的统统统统删除的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l &apos;linux-*&apos; | sed &apos;/^ii/!d;/&apos;&quot;$(uname -r | sed &quot;s/-/\1/&quot;)&quot;&apos;/d;s/^[^ ]* [^ ]* .*/\1/;/[0-9]/!d&apos; | xargs sudo apt-get -y purge</span><br></pre></td></tr></table></figure></p>
+
+<p>查看内核是否都删除干净了。没干净继续删除。有的内核后面会显示是deinstall 那需要通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections | grep deinstall | sed &apos;s/deinstall/\lpurge/&apos; | sudo dpkg --set-selections; sudo dpkg -Pa</span><br></pre></td></tr></table></figure>
+
+<p>通过上面方法就可以。<br>还有一种通过正则表达式匹配内核然后除最新的统统统统删除的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l &apos;linux-*&apos; | sed &apos;/^ii/!d;/&apos;&quot;$(uname -r | sed &quot;s/-/\1/&quot;)&quot;&apos;/d;s/^[^ ]* [^ ]* .*/\1/;/[0-9]/!d&apos; | xargs sudo apt-get -y purge</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
@@ -291,19 +299,19 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/25/问题随笔/Ubuntu16-04安装QQ（for-linux）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/25/问题随笔/fedora-安装lantern/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          Ubuntu16.04安装QQ（for linux）
+          fedora-安装lantern
         
       </span>
     </a>
   
   
-    <a href="/2018/12/25/问题随笔/fedora-安装lantern/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">fedora-安装lantern</span>
+    <a href="/2018/12/25/问题随笔/fedora删除多余不用的内核/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">fedora删除多余不用的内核</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -321,10 +329,10 @@
     <div id="footer-info" class="inner">
       
 <p>
-    <span id="busuanzi_container_site_uv" style="display:none">
+    <span id="busuanzi_container_site_uv" style='display:none'>
         总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
+    <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
@@ -380,19 +388,19 @@
         <ul class="mobile-header-menu-navbar">
             
             <li>
-                <a href="/">
+                <a  href="/">
                     <i class="fa fa-home"></i><span>Home</span>
                 </a>
             </li>
             
             <li>
-                <a href="/archives">
+                <a  href="/archives">
                     <i class="fa fa-archive"></i><span>Archives</span>
                 </a>
             </li>
             
             <li>
-                <a href="/about">
+                <a  href="/about">
                     <i class="fa fa-user"></i><span>About</span>
                 </a>
             </li>
