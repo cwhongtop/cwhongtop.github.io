@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="cwhong&#39;s blog">
 <meta property="og:description" content="安装manjaro过程中遇到的一些小问题的汇总与解决  1、使用U盘进行安装时无法进入桌面或安装时卡住 这是双显卡电脑独显问题需要禁用独显，U盘启动界面光标移至boot行按e编辑改成nouveau.modeset=0，但这只是临时禁用独显，安装成功后修改grub.cfg永久禁用  1$ sudo nano /boot/grub/grub.cfg   在文本中找到 quiet 在后面输入 xdri">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-08T09:36:29.767Z">
+<meta property="og:updated_time" content="2019-12-24T18:13:22.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="manjaro安装后的一些问题与调整">
 <meta name="twitter:description" content="安装manjaro过程中遇到的一些小问题的汇总与解决  1、使用U盘进行安装时无法进入桌面或安装时卡住 这是双显卡电脑独显问题需要禁用独显，U盘启动界面光标移至boot行按e编辑改成nouveau.modeset=0，但这只是临时禁用独显，安装成功后修改grub.cfg永久禁用  1$ sudo nano /boot/grub/grub.cfg   在文本中找到 quiet 在后面输入 xdri">
@@ -188,10 +188,22 @@
 <p>安装 <em>vlc</em></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S vlc</span><br></pre></td></tr></table></figure>
 
+<h2 id="4、manjaro-kde中deepin-com-qq-im无法启动"><a href="#4、manjaro-kde中deepin-com-qq-im无法启动" class="headerlink" title="4、manjaro kde中deepin.com.qq.im无法启动"></a>4、manjaro kde中deepin.com.qq.im无法启动</h2><p>Manjaro-kde桌面安装TIM/QQ的时候经常出现无法启动，其主要原因是deein-wine-tim打包了Gnome桌面部分内容，因此在KDE桌面环境下需要安装相应的Gnome桌面设置环境</p>
+<blockquote>
+<p>安装gnome-settings-daemon</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S gnome-settings-daemon</span><br></pre></td></tr></table></figure>
+
+<p>设置gnome-settings-daemon自启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo  cp  /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop   ~/.config/autostart</span><br></pre></td></tr></table></figure>
+
+<p>如果不行就在/opt/deepinwine/apps/Deepin-QQ/run.sh开头添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/gsd-xsettings &amp;</span><br></pre></td></tr></table></figure>
+
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月08日 17:36</p>
+        <p>最后更新： 2019年12月25日 02:13</p>
         <p>原始链接： <a class="post-url" href="/2019/11/08/问题随笔/manjaro安装的一些问题与调整/" title="manjaro安装后的一些问题与调整">https://cwhong.top/2019/11/08/问题随笔/manjaro安装的一些问题与调整/</a></p>
         <footer>
             <a href="https://cwhong.top">
@@ -311,7 +323,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1、使用U盘进行安装时无法进入桌面或安装时卡住"><span class="post-toc-text">1、使用U盘进行安装时无法进入桌面或安装时卡住</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2、安装搜狗输入法"><span class="post-toc-text">2、安装搜狗输入法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3、网易云音乐中无法输入中文"><span class="post-toc-text">3、网易云音乐中无法输入中文</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1、使用U盘进行安装时无法进入桌面或安装时卡住"><span class="post-toc-text">1、使用U盘进行安装时无法进入桌面或安装时卡住</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2、安装搜狗输入法"><span class="post-toc-text">2、安装搜狗输入法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3、网易云音乐中无法输入中文"><span class="post-toc-text">3、网易云音乐中无法输入中文</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4、manjaro-kde中deepin-com-qq-im无法启动"><span class="post-toc-text">4、manjaro kde中deepin.com.qq.im无法启动</span></a></li></ol>
         </nav>
     </aside>
     
